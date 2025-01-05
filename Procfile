@@ -1,0 +1,1 @@
+web: gunicorn scoop_project.wsgi
