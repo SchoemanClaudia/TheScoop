@@ -8,7 +8,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 # Create your models here.
 class ScoopReview(models.Model):
     location = models.CharField(max_length=200, unique=True)
-    blurb = models.SlugField(max_length=200, unique=True)
+    blurb = models.TextField(blank=True)
     review = models.TextField()
     # Rating out of 5
     rating = models.DecimalField(
@@ -26,3 +26,13 @@ class ScoopReview(models.Model):
         User, on_delete=models.CASCADE, related_name="review_posts")
     created_at = models.DateField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
+
+
+class ReviewComment(models.Model):
+    review = models.ForeignKey(
+        ScoopReview, on_delete=models.CASCADE, related_name="review_location")
+    critic = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="commenter")
+    comment = models.TextField()
+    accept = models.BooleanField(default=False)
+    created_at = models.DateField(auto_now_add=True)
