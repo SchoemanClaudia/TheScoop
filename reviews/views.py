@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views import generic
+from .models import ScoopReview
 
 # Create your views here.
-
-def my_reviews(request):
-    return HttpResponse("Hello, here's The Scoop!")
+class ReviewList(generic.ListView):
+    queryset = ScoopReview.objects.filter(status=1)
+    template_name = "review_list.html"
