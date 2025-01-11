@@ -27,6 +27,9 @@ class ScoopReview(models.Model):
     created_at = models.DateField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
 
+    def __str__(self):
+        return f"{self.location} | rated {self.rating} by {self.critic}"
+
 
 class ReviewComment(models.Model):
     review = models.ForeignKey(
@@ -36,3 +39,6 @@ class ReviewComment(models.Model):
     comment = models.TextField()
     accept = models.BooleanField(default=False)
     created_at = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Comment {self.comment} by {self.critic}"
