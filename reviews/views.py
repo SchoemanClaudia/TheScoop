@@ -5,4 +5,4 @@ from .models import ScoopReview
 # Create your views here.
 class ReviewList(generic.ListView):
     queryset = ScoopReview.objects.filter(status=1)
-    template_name = "review_list.html"
+    template_name = "reviews/review_list.html"
