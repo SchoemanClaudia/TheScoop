@@ -9,7 +9,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 class ScoopReview(models.Model):
     location = models.CharField(max_length=200, unique=True)
     blurb = models.CharField(max_length=100, blank=True)
-    slug = models.SlugField(max_length=100, unique=True, null=True)
+    slug = models.SlugField(max_length=100, unique=True)
     review = models.TextField()
     # Rating out of 5
     rating = models.DecimalField(
