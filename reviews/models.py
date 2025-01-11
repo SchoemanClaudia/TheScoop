@@ -8,7 +8,8 @@ STATUS = ((0, "Draft"), (1, "Published"))
 # Create your models here.
 class ScoopReview(models.Model):
     location = models.CharField(max_length=200, unique=True)
-    blurb = models.TextField(blank=True)
+    blurb = models.CharField(max_length=50, blank=True)
+    slug = models.SlugField(max_length=100, unique=True)
     review = models.TextField()
     # Rating out of 5
     rating = models.DecimalField(
@@ -27,6 +28,9 @@ class ScoopReview(models.Model):
     created_at = models.DateField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
 
+    class Meta:
+        ordering = ["-created_at"]
+
     def __str__(self):
         return f"{self.location} | rated {self.rating} by {self.critic}"
 
@@ -39,6 +43,9 @@ class ReviewComment(models.Model):
     comment = models.TextField()
     accept = models.BooleanField(default=False)
     created_at = models.DateField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["-created_at"]
 
     def __str__(self):
         return f"Comment {self.comment} by {self.critic}"
