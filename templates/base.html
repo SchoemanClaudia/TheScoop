@@ -26,10 +26,12 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'home' %}"><span>The Scoop</span></a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -44,17 +46,30 @@
         </div>
     </nav>
 
-    <main class="flex-shrink-0 main-bg">
+    <!-- Header Section -->
+    <header class="hero text-center">
+        <div class="container">
+            <img src="#" alt="The Scoop Hero" class="img-fluid mb-4">
+            <h1 class="display-4">Whats the scoop?</h1>
+            <p class="lead">Your ultimate guide to the best ice cream in town!</p>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="container my-5">
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
     </main>
 
-    <!-- Footer -->
-    <footer class="footer mt-auto py-3 dark-bg">
-        <i class="fab fa-twitter-square ms-3"></i>
-        <i class="fab fa-instagram-square ms-3"></i>
-        <p class="m-0 text-center text-white">This website is for academic purpose only. </p>
+    <!-- Footer Section -->
+    <footer class="footer mt-auto py-3 bg-dark text-white text-center">
+        <p> &copy; 2025 The Scoop. <br>Follow our tasting journey:</p>
+        <p>
+            <i class="fab fa-instagram-square ms-2"></i>
+            <i class="fab fa-twitter-square ms-2"></i>
+        </p>
+        <p>This website is for academic purpose only.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
