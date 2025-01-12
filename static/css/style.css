@@ -10,6 +10,14 @@ body {
 }
 
 /* Hero Section */
+.hero {
+    background: url('') no-repeat center center/cover;
+    background-color: #cccccc;
+    color: #ffffff;
+    padding: 100px 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
 .hero h1 {
     font-size: 3rem;
     font-weight: bold;
@@ -53,6 +61,24 @@ body {
 .card-text {
     font-size: 1rem;
     color: #202020;
+}
+
+.pagination {
+    padding-top: 2em;
+}
+
+.page-link {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: lightcoral;
+    border: none;
+    border-radius: 5px;
+}
+
+.page-link:hover {
+    color:lightcoral;
+    border: 2px solid, lightcoral;
+    background-color:#f8f9fa;
 }
 
 /* Footer */
