@@ -4,17 +4,36 @@
 body {
     font-family: 'Outfit', sans-serif;
     background-color: #f8f9fa;
-    color: #333;
+    color: #212529;
     margin: 0;
     padding: 0;
 }
 
+/* Navbar brand styling */
+.navbar-brand {
+    font-family: 'Lobster', sans-serif;
+    color: lightcoral !important;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    color: lightpink !important; /* Highlight color on hover/active */
+    background-color: rgba(255, 255, 255, 0.1); /* Slight background hover effect */
+    border-radius: 5px;
+}
+
+/* Responsive navbar toggler icon */
+.navbar-toggler {
+    border: none;
+}
+
 /* Hero Section */
 .hero {
-    background: url('') no-repeat center center/cover;
-    background-color: #cccccc;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../images/hero.webp') no-repeat center center/cover;
     color: #ffffff;
-    padding: 100px 0;
+    padding: 150px 0;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
@@ -29,8 +48,9 @@ body {
 }
 
 /* Review Cards */
-.card { 
-    display: flex; /* Ensure all cards have the same height */
+.card {
+    display: flex;
+    /* Ensure all cards have the same height */
     flex-direction: column;
     height: 100%;
     border: none;
@@ -76,17 +96,19 @@ body {
 }
 
 .page-link:hover {
-    color:lightcoral;
+    color: lightcoral;
     border: 2px solid, lightcoral;
-    background-color:#f8f9fa;
+    background-color: #f8f9fa;
 }
 
 /* Footer */
 footer {
-    background-color: #212529;
-    color: #cccccc;
+    background-color: lightpink;
+    color: #212529;
 }
 
 footer p {
+    font-size: 70%;
     margin: 0;
+    padding: 10px;
 }
