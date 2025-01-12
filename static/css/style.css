@@ -1,0 +1,39 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Review Cards */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Footer */
+footer {
+    background-color: #212529;
+    color: #ccc;
+}
+
+footer p {
+    margin: 0;
+}
