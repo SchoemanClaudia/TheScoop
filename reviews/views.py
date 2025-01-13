@@ -15,7 +15,7 @@ def post_detail(request, slug):
 
     **Context**
 
-    ``post``
+    ``reviews``
         An instance of :model:`reviews.ScoopReview`.
 
     **Template:**
