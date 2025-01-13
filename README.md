@@ -1,131 +1,253 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# The Scoop
 
-Welcome Claudia Schoeman,
+xxxxx
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Live Link: https://the-scoop-670ac5b1567b.herokuapp.com/
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+![Screen Mock-up](assets/images/responsive-mockup.webp)
 
-## Gitpod Reminders
+## Contents
+- [Overview](#overview)
+- [Features](#features)
+- [User Stories](#user-stories)
+- [Agile](#agile)
+- [Solution Model](#solution-model)
+- [UX/UI Wireframing](#ux-ui-wireframing)
+- [Technologies Used](#technologies-used)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Overview
 
-`python3 -m http.server`
+- xxxxx
 
-A blue button should appear to click: _Make Public_,
+## Features
 
-Another blue button should appear to click: _Open Browser_.
+__Existing features:__
+- 
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+  ![Home screen](static/images/home.webp)
 
-A blue button should appear to click: _Make Public_,
+- 
+  - 
 
-Another blue button should appear to click: _Open Browser_.
+  ![Review cards](static/images/review-cards.webp)
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- 
+  - 
+    - 
 
-To log into the Heroku toolbelt CLI:
+  ![Post detail page](static/images/post-detail.webp)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- 
+  - 
+  - 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+  ![Login](static/images/login.webp)  ![Register](static/images/register.webp)
 
-### Connecting your Mongo database
+- 
+  - 
+  
+  ![Comment](statics/images/comment.webp)  ![Edit](static/images/edit.webp) | ![Delete](static/images/delete.webp)
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+- 
+  - 
+    - 
 
-------
+  ![Contact form](static/images/contact-form.webp)
 
-## Release History
+- 
+  - 
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+  ![Admin page](static/images/admin-page.webp) ![Admin panel](static/images/admin-panel.webp)
 
-**June 18, 2024,** Add Mongo back into template
+__Future Features__
+- 
+  - 
+    - 
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+## User Stories
 
-**May 28 2024:** Fix Mongo and Links installs
+User stories were used to keep track of the MOSCOW framework and project MVP as working through the project. 
 
-**April 26 2024:** Update node version to 16
+![User stories](static/images/user-stories.webp)
 
-**September 20 2023:** Update Python version to 3.9.17.
+| USER STORY | DETAILS | ACCEPTANCE CRITERIA |
+|:---:|:---:|:---:|
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## Agile
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+For the Agile process I utilised the Github project board and user stories. Detailing the production process and highlighting issues when they arose. 
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Project Issues
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+![Agile](static/images/agile.webp)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+New user stories have been added as the project progressed and based on user feedback during the final testing phase. 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+A MOSCOW framework has been utilised. 
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+Mo: Full review details, CRUD functionality.(Leave reviews, edit reviews, delete reviews) \
+S: Ratings that are shown on all pages and averaged.  \
+C: Code and style revisement. Future features such as Carousel view, ratings convered to star ratings. \
+oW: Ability to add own reviews as a user. 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Solution Model
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Flowchart
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+![Flowchart](static/images/flowchart.webp)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## UX/UI Wireframing
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Wireframe
 
-------
+### Accessibility
 
-## FAQ about the uptime script
+### ERD Design
 
-**Why have you added this script?**
+### Database Model
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
 
-**How will this affect me?**
+## Technologies Used
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Languages
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+- HTML5
+- CSS3
+- JavaScript
+- Python
+- Django
+- Boostrap
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+### Other Sites
 
-**So….?**
+- 
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+- 
 
-**Can I opt out?**
+- Flowchart diagram created using Miro app:
+  - Miro: https://miro.com/
+    
+- Image assets reduced with online platforms:
+  - TinyPNG: https://tinypng.com/
+  - XConvert: https://www.xconvert.com/
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+- Assisted problem solving sites:
+  - 
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+## Testing 
 
-**Anything more?**
+- I have manually tested by checking the following:
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+| TEST INPUT | CORRECT OUTCOME | MEET REQUIREMENTS |
+|:---:|:---:|:---:|
+| xxx | PASS |
+| 
 
----
+### Validator Testing 
 
-Happy coding!
+- 
+
+  ![Errors encountered](static/images/errors.webp)
+
+- 
+
+![No errors](static/images/clear.webp)
+
+### Bugs Encountered
+
+- 
+  - 
+
+![bug](assets/images/bug.webp)
+
+- 
+
+![Initial deployment](assets/images/first-deploy.webp)
+
+### Unfixed Bugs
+
+- No unfixed bugs, app running with no errors.
+
+![Final Result Success](assets/images/heroku-app.webp)
+
+## Deployment
+
+### Cloning of the Repository Code locally
+- The terminal function and template for the deployable application was provided by Code Institute
+  - Go to the Github repository that you want to clone
+  - Click on the Code button located above all the project files
+  - Click on HTTPS and copy the repository link
+  - Open the IDE of your choice and paste the copied git url into the IDE terminal
+  - The project is now created as a local clone
+
+| **Step** | **Code** | 
+|---|---|
+| **In Github** |
+| Create a new Github Repo | Github > new Repository |
+| Open Repo | If your Github is utlising the plugin click 'Open' to launch your preferred IDE |
+| **In IDE**|
+| Install Django: | pip3 install Django~=4.2.1 |
+| Create requirements file | pip3 --local > requirements.txt |
+| Create Project (proj_name)| Django-admin startproject proj_name . |
+| Run Server | python3 manage.py runserver |
+| Add Servers to ALLOWED_HOSTS in settings.py | ALLOWED_HOSTS = ALLOWED_HOSTS = ['.codeinstitute-ide.net', '.herokuapp.com'] |
+| Create App (app_name) | python3 manage.py startapp app_name |
+| Add to INSTALL_APPS in settings.py | INSTALLED_APPS = [… 'app_name',] |
+| **Set Up Heroku** |
+| Heroku Dashboard | https://www.heroku.com/ |
+| Create new Heroku App | Choose unique name / select close region |
+| Add Config Vars | Config Vars > Reveal Config Vars > Add New Key > DISABLE_COLLECTSTATIC value 1 |
+| **In IDE** |
+| Install web server Gunicorn and freeze | pip3 install gunicorn~=20.1 \ pip3 freeze --local>requirements.txt |
+| Create Procfile | create Procfile in root directory |
+| Declare Procfile | Add web : gunicorn proj_name.wsgi in Procfile |
+| **In Heroku** |
+| Connect Repository | Navigate to Deploy tab > connect to Github Repo |
+| Check Add ons & Dynos | Inside app resources make sure to use Eco Dynos. Delete PostGres DB Add-ons |
+| **Database** |
+| Create Postgres Database | CI Database Creator - https://dbs.ci-dbs.net/ |
+| **In IDE** |
+| Install Database Packages | pip3 install dj-database-url~=0.5 psycopg / then pip3 freeze --local > requirements.txt |
+| Create env.py file | Root directoy add env.py and add to .gitignore |
+| **In env.py** |
+| import OS | Top line 'import os' |
+| set enviroment variables | os.environ["DATABASE_URL"] = "Paste in PostgreSQL database URL" |
+| Secret Key | os.environ["SECRET_KEY"] = "Make up your own randomSecretKey" |
+| **In Heroku** | 
+| Add Secret Ket to config Vars |  SECRET_KEY, “randomSecretKey” |
+| Add a Config Var called DATABASE_URL | DATABASE_URL, “yourDBUrlgoeshere” |
+| **In settings.py** |
+| Link to env.py | from pathlib import Path, import os, import dj_database_url, if os.path.isfile("env.py"): import env |
+| Remove secret key | SECRET_KEY = os.environ.get('SECRET_KEY') |
+| Comment out old Database section | # DATABASES = { } ( # on each line ) |
+| Add new Databases section | DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))} |
+| **Migrate Database** |
+| Save all files and Migrate | python3 manage.py migrate |
+| **Create Super User** |
+| Create Super User | python3 manage.py createsuperuser |
+| **In settings.py** |
+| Set DEBUG to false | DEBUG = False |
+|**Redeploy** |
+| Push all Git changes and commits | Redeploy to Heroku |
+
+### Version Control
+- The Scoop was created using Gitpod editor and pushed to Github to the remote repository 'TheScoop'
+- Git commands were used throughout the development to push the code to the remote repository
+- The following git commands were used:
+  - git add .  to add the files to the staging area before being committed
+  - git commit -m "commit message", to commit changes to the local repository queue that are ready for the final step
+  - git push, to push all committed code to the remote repository on Github
+  - pip3 install imports, for python library loads
+  - add loaded packages to requirements.txt file for Heroku:
+    - run, pip3 freeze > requirements.txt, to terminal
+
+## Credits 
+
+- Slack channel peers for their feedback and support
+- My mentor for the support and knowledge shared, helping to keep this prototype simple and clean
+- Tutor Assist for the support
