@@ -26,6 +26,8 @@ def post_detail(request, slug):
     queryset = ScoopReview.objects.filter(status=1)
     review = get_object_or_404(queryset, slug=slug)
     comments = review.review_location.all().order_by("-created_at")
+    comment_count = review.review_location.filter(accept=True).count()
+    
 
     return render(
         request,
@@ -33,5 +35,6 @@ def post_detail(request, slug):
         {
             "review": review,
             "comments": comments,
+            "comment_count": comment_count,
         },
     )
