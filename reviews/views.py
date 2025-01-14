@@ -25,9 +25,13 @@ def post_detail(request, slug):
 
     queryset = ScoopReview.objects.filter(status=1)
     review = get_object_or_404(queryset, slug=slug)
+    comments = review.review_location.all().order_by("-created_at")
 
     return render(
         request,
         "reviews/post_detail.html",
-        {"review": review},
+        {
+            "review": review,
+            "comments": comments,
+        },
     )

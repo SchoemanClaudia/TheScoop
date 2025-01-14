@@ -2,22 +2,53 @@
 {% load static %}
 
 <div class="container mt-5">
-    <div class="row">
-        <div class="post-img col-4 text-center">
-            <img src="{% static 'images/default.jpg' %}" width="100%">
-        </div>
-        <div class="col-8">
-            <!-- Review title goes in these h1 tags -->
-            <h1 class="post-title">{{ review.location }}</h1>
-                <!-- Reviewer details goes before the | the post's created date goes after -->
-                <p class="post-subtitle">{{ review.critic }} | {{ review.created_at }}</p>
-                <br>
-                <h3 class="post-subtitle">{{ review.blurb | safe }}</h3>
-                <br>
-                <p class="card-text">
-                    {{ review.review | safe }}
-        </div>
+  <div class="row">
+    <div class="post-img col-4 text-center">
+      <img src="{% static 'images/default.jpg' %}" width="100%">
     </div>
+    <div class="col-8">
+      <!-- Review title goes in these h1 tags -->
+      <h1 class="post-title">{{ review.location }}</h1>
+      <!-- Reviewer details goes before the | the post's created date goes after -->
+      <p class="post-subtitle">{{ review.critic }} | {{ review.created_at }}</p>
+      <br>
+      <h3 class="post-subtitle">{{ review.blurb | safe }}</h3>
+      <br>
+      <p class="card-text">
+        {{ review.review | safe }}
+    </div>
+  </div>
+
+  <!-- Display Comments here -->
+    <div class="col-md-8 mb-4  mt-3 ">
+      <h3>What our community thinks:</h3>
+      <div class="card-body">
+        <!-- A for loop inside the empty control tags
+          to iterate through each comment in comments -->
+        {% for comment in comments %}
+        <div class="p-2 comments
+            {% if not comment.accept and comment.critic == user %}
+            faded{% elif not comment.accept %} d-none{% endif %}">
+          <p class="font-weight-bold">
+            {{ comment.critic }}
+            <span class="font-weight-normal">
+              {{ comment.created_at }}
+            </span> wrote:
+          </p>
+          <div id="comment{{ comment.id }}">
+            {{ comment.comment | linebreaks }}
+          </div>
+          {% if not comment.accept and comment.critic == user %}
+          <p class="approval">
+            This comment is awaiting approval
+          </p>
+          {% endif %}
+        </div>
+        <!-- The for loop ends here -->
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </div>
 
 {% endblock content %}
