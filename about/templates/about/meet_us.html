@@ -10,13 +10,14 @@
         <div class="col-8">
             <div class="col-8">
                 <!-- Name goes between these h2 tags -->
-                <h2></h2>
+                <h2>{{ about.name }}</h2>
                 <!-- Bio goes directly underneath this -->
+                {{ about.bio | safe }}
             </div>
             <div class="row">
                 <div class="col text-right">
                     <!-- Updated on field goes in here -->
-                    <p class="text-end"><em>Updated: </em></p>
+                    <p class="text-end"><em>{{ about.updated_at }}</em></p>
                 </div>
             </div>
         </div>
