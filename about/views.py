@@ -11,6 +11,6 @@ def meet_us(request):
 
     return render(
         request,
-        "about/about.html",
+        "about/meet_us.html",
         {"about": about},
     )
