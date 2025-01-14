@@ -69,7 +69,11 @@
                     {% endif %}
                 </ul>
                 <span class="navbar-text text-muted">
-                    Delicious reviews, one scoop at a time
+                    {% if user.is_authenticated %}
+                    <p class="text-end m-3">Welcome {{ user }}</p>
+                    {% else %}
+                    <p class="text-end m-3">You are not logged in</p>
+                    {% endif %}
                 </span>
             </div>
         </div>
