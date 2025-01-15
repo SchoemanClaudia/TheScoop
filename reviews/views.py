@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
+from django.contrib import messages
 from .models import ScoopReview, ReviewComment
 from .forms import CommentForm
 
@@ -36,6 +37,10 @@ def post_detail(request, slug):
             comment.critic = request.user
             comment.review = review
             comment.save()
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Thank you for contributing to our comminity, your comment is submitted & awaiting approval'
+    )
 
     comment_form = CommentForm()
     
