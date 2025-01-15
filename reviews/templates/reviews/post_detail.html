@@ -1,5 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 <div class="container mt-5">
   <div class="row">
@@ -18,7 +19,9 @@
         {{ review.review | safe }}
     </div>
   </div>
+</div>
 
+<div class="container mt-5">
   <!-- Display comment counter with icon -->
   <div class="row">
     <div class="col-12">
@@ -32,34 +35,48 @@
   </div>
 
   <!-- Display Comments here -->
-    <div class="col-md-8 mb-4  mt-3 ">
-      <h3>What our community thinks:</h3>
-      <div class="card-body">
-        <!-- A for loop inside the empty control tags
+  <div class="row">
+    <h3>What our community thinks:</h3>
+    <div class="card-body">
+      <!-- A for loop inside the empty control tags
           to iterate through each comment in comments -->
-        {% for comment in comments %}
-        <div class="p-2 comments
+      {% for comment in comments %}
+      <div class="p-2 comments
             {% if not comment.accept and comment.critic == user %}
             faded{% elif not comment.accept %} d-none{% endif %}">
-          <p class="font-weight-bold">
-            {{ comment.critic }}
-            <span class="font-weight-normal">
-              {{ comment.created_at }}
-            </span> wrote:
-          </p>
-          <div id="comment{{ comment.id }}">
-            {{ comment.comment | linebreaks }}
-            <hr>
-          </div>
-          {% if not comment.accept and comment.critic == user %}
-          <p class="approval">
-            This comment is awaiting approval
-          </p>
-          {% endif %}
+        <p class="font-weight-bold">
+          {{ comment.critic }}
+          <span class="font-weight-normal">
+            {{ comment.created_at }}
+          </span> wrote:
+        </p>
+        <div id="comment{{ comment.id }}">
+          {{ comment.comment | linebreaks }}
+          <hr>
         </div>
-        <!-- The for loop ends here -->
-        {% endfor %}
+        {% if not comment.accept and comment.critic == user %}
+        <p class="approval">
+          This comment is awaiting approval
+        </p>
+        {% endif %}
       </div>
+      <!-- The for loop ends here -->
+      {% endfor %}
+    </div>
+
+    <!-- Add comments -->
+    <div class="card-body">
+      {% if user.is_authenticated %}
+      <h3>{{ user.username }}, have you been to {{ review.location }}?</h3>
+      <p>Tell us more below:</p>
+      <form id="commentForm" method="post" style="margin-top: 1.3em;">
+        {{ comment_form | crispy }}
+        {% csrf_token %}
+        <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+      </form>
+      {% else %}
+      <p>Log in to give us your opinion</p>
+      {% endif %}
     </div>
   </div>
 </div>

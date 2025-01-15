@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
-from .models import ScoopReview
+from .models import ScoopReview, ReviewComment
 from .forms import CommentForm
 
 # Create your views here.
