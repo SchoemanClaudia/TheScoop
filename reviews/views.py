@@ -28,6 +28,15 @@ def post_detail(request, slug):
     review = get_object_or_404(queryset, slug=slug)
     comments = review.review_location.all().order_by("-created_at")
     comment_count = review.review_location.filter(accept=True).count()
+
+    if request.method == "POST":
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.critic = request.user
+            comment.review = review
+            comment.save()
+
     comment_form = CommentForm()
     
 
