@@ -31,6 +31,7 @@ def post_detail(request, slug):
     comment_count = review.review_location.filter(accept=True).count()
 
     if request.method == "POST":
+        print("Received a POST request")
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
@@ -42,7 +43,8 @@ def post_detail(request, slug):
                 'Thank you for contributing to our comminity, your comment is submitted & awaiting approval'
     )
 
-    comment_form = CommentForm()
+    comment_form = CommentForm(data=request.POST)
+    print("About to render template")
     
 
     return render(
