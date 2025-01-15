@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from .models import ScoopReview
+from .forms import CommentForm
 
 # Create your views here.
 class ReviewList(generic.ListView):
@@ -27,6 +28,7 @@ def post_detail(request, slug):
     review = get_object_or_404(queryset, slug=slug)
     comments = review.review_location.all().order_by("-created_at")
     comment_count = review.review_location.filter(accept=True).count()
+    comment_form = CommentForm()
     
 
     return render(
@@ -36,5 +38,6 @@ def post_detail(request, slug):
             "review": review,
             "comments": comments,
             "comment_count": comment_count,
+            "comment_form": comment_form,
         },
     )
