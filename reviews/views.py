@@ -48,7 +48,7 @@ def post_detail(request, slug):
             # Redirect after submit success, clear form to avoid resubmit
             return HttpResponseRedirect(reverse('review_detail', args=[slug]))
     else:
-        # For GET requests, instantiate a new, empty form
+        # Populate new empty form (for GET request)
         comment_form = CommentForm()
 
     return render(
@@ -68,30 +68,40 @@ def post_detail(request, slug):
 
 def comment_edit(request, slug, comment_id):
     """
-    view to edit comments
-     """
-    if request.method == "POST":
+    View to edit comments
+    """
+    # Fetch the review and comment
+    review = get_object_or_404(ScoopReview, slug=slug)
+    comment = get_object_or_404(ReviewComment, pk=comment_id)
 
-        queryset = ScoopReview.objects.filter(status=1)
-        review = get_object_or_404(ScoopReview, slug=slug)
-        comment = get_object_or_404(ReviewComment, pk=comment_id)
+    if request.method == "POST":
         comment_form = CommentForm(data=request.POST, instance=comment)
 
         if comment_form.is_valid() and comment.critic == request.user:
+            # Save updated comment, still needs admin review
             comment = comment_form.save(commit=False)
             comment.review = review
             comment.accept = False
             comment.save()
-            messages.add_message(request, messages.SUCCESS, 
-                'Comment Updated!')
-
+            messages.success(request, 'Comment Updated!')
             return HttpResponseRedirect(reverse('review_detail', args=[slug]))
         else:
-            messages.add_message(request, messages.ERROR,
-                'Error updating comment!')
+            messages.error(request, 'Error updating comment!')
     else:
-        # For GET requests, instantiate a new, empty form
-        comment_form = CommentForm()
+        # Populate form with existing comment data (for GET request)
+        comment_form = CommentForm(instance=comment)
+
+    return render(
+        request,
+        # Render new post_detail.html template
+        "reviews/post_detail.html",
+        {
+            "review": review,
+            "comment_form": comment_form,
+            "comment_editing": True, 
+            "comment": comment
+        }
+    )
 
 
 def comment_delete(request, slug, comment_id):
