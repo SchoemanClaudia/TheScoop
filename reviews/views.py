@@ -36,17 +36,20 @@ def post_detail(request, slug):
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
+            # If form is valid, save the comment
             comment = comment_form.save(commit=False)
             comment.critic = request.user
             comment.review = review
             comment.save()
             messages.add_message(
                 request, messages.SUCCESS,
-                'Your comment is submitted & awaiting approval'
-    )
-
-    comment_form = CommentForm(data=request.POST)
-    
+                'Your comment is submitted & awaiting approval.'
+            )
+            # Redirect after submit success, clear form to avoid resubmit
+            return HttpResponseRedirect(reverse('review_detail', args=[slug]))
+    else:
+        # For GET requests, instantiate a new, empty form
+        comment_form = CommentForm()
 
     return render(
         request,
@@ -60,6 +63,7 @@ def post_detail(request, slug):
             "comment_form": comment_form,
         },
     )
+
     
 
 def comment_edit(request, slug, comment_id):
@@ -80,8 +84,11 @@ def comment_edit(request, slug, comment_id):
             comment.save()
             messages.add_message(request, messages.SUCCESS, 
                 'Comment Updated!')
+
+            return HttpResponseRedirect(reverse('review_detail', args=[slug]))
         else:
             messages.add_message(request, messages.ERROR,
                 'Error updating comment!')
-
-    return HttpResponseRedirect(reverse('review_detail', args=[slug]))
+    else:
+        # For GET requests, instantiate a new, empty form
+        comment_form = CommentForm()

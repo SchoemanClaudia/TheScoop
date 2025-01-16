@@ -1,4 +1,5 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+{% block content %}
 {% load static %}
 {% load crispy_forms_tags %}
 
@@ -8,9 +9,7 @@
       <img src="{% static 'images/default.jpg' %}" width="100%">
     </div>
     <div class="col-8">
-      <!-- Review title goes in these h1 tags -->
       <h1 class="post-title">{{ review.location }}</h1>
-      <!-- Reviewer details goes before the | the post's created date goes after -->
       <p class="post-subtitle">{{ review.critic }} | {{ review.created_at }}</p>
       <br>
       <h3 class="post-subtitle">{{ review.blurb | safe }}</h3>
@@ -22,7 +21,6 @@
 </div>
 
 <div class="container mt-5">
-  <!-- Display votes with icon -->
   <div class="row">
     <div class="col-12">
       <strong>
@@ -35,16 +33,12 @@
 </div>
 
 <div class="container mt-5">
-  <!-- Display Comments here -->
   <div class="row">
     <h3>What our community thinks:</h3>
     <div class="col-12">
-      <!-- Comment counter with icon -->
       <i class="far fa-comments"></i> {{ comment_count }}
     </div>
     <div class="card-body">
-      <!-- A for loop inside the empty control tags
-          to iterate through each comment in comments -->
       {% for comment in comments %}
       <div class="p-2 comments
             {% if not comment.accept and comment.critic == user %}
@@ -68,7 +62,6 @@
         <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
         {% endif %}
       </div>
-      <!-- The for loop ends here -->
       {% endfor %}
     </div>
   </div>
@@ -77,6 +70,7 @@
   <div class="card-body">
     {% if user.is_authenticated %}
     <h3>{{ user.username }}, have you been to {{ review.location }}?</h3>
+
     <p>Tell us more below:</p>
     <form id="commentForm" method="post" style="margin-top: 1.3em;">
       {{ comment_form | crispy }}
@@ -86,6 +80,7 @@
     {% else %}
     <p>Log in to give us your opinion</p>
     {% endif %}
+
   </div>
 </div>
 </div>
