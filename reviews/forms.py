@@ -8,4 +8,4 @@ class CommentForm(forms.ModelForm):
         fields = ('comment',)
 
     # Set the 'comment' field as optional by specifying required=False
-    comment = forms.CharField(required=False, widget=forms.Textarea(attrs={'rows': 6, 'cols': 40}))
+    comment = forms.CharField(required=True, widget=forms.Textarea(attrs={'rows': 6, 'cols': 40}))
