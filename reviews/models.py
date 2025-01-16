@@ -39,7 +39,7 @@ class ReviewComment(models.Model):
     review = models.ForeignKey(
         ScoopReview, on_delete=models.CASCADE, related_name="review_location")
     critic = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="commenter")
+        User, on_delete=models.CASCADE, related_name="comments")
     comment = models.TextField()
     accept = models.BooleanField(default=False)
     created_at = models.DateField(auto_now_add=True)

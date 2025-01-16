@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
+from django.http import HttpResponseRedirect
 from .models import ScoopReview, ReviewComment
 from .forms import CommentForm
 
@@ -42,7 +43,7 @@ def post_detail(request, slug):
             comment.save()
             messages.add_message(
                 request, messages.SUCCESS,
-                'Thank you for contributing to our comminity, your comment is submitted & awaiting approval'
+                'Your comment is submitted & awaiting approval'
     )
 
     comment_form = CommentForm(data=request.POST)
@@ -61,3 +62,28 @@ def post_detail(request, slug):
             "comment_form": comment_form,
         },
     )
+    
+
+def comment_edit(request, slug, comment_id):
+    """
+    view to edit comments
+     """
+    if request.method == "POST":
+
+        queryset = ScoopReview.objects.filter(status=1)
+        review = get_object_or_404(ScoopReview, slug=slug)
+        comment = get_object_or_404(ReviewComment, pk=comment_id)
+        comment_form = CommentForm(data=request.POST, instance=comment)
+
+        if comment_form.is_valid() and comment.critic == request.user:
+            comment = comment_form.save(commit=False)
+            comment.review = review
+            comment.accept = False
+            comment.save()
+            messages.add_message(request, messages.SUCCESS, 
+                'Comment Updated!')
+        else:
+            messages.add_message(request, messages.ERROR,
+                'Error updating comment!')
+
+    return HttpResponseRedirect(reverse('review_detail', args=[slug]))
