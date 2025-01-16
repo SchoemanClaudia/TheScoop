@@ -14,11 +14,13 @@
         <div class="card mb-4">
             <div class="card">
                 <a href="{% url 'post_detail' review.slug %}" class="post-link">
-                    {% if "placeholder" in post.featured_image.url %}
-                    <img src="{% static 'images/default.jpg' %}" alt="{{ review.location }}">
-                    {% else %}
-                    <img src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
-                    {% endif %}
+                    <div class="image-container">
+                        {% if "placeholder" in post.featured_image.url %}
+                        <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="placeholder image">
+                        {% else %}
+                        <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
+                        {% endif %}
+                    </div>
                     <div class="card-body">
                         <h5 class="card-title">{{ review.location }}</h5>
                         <p class="card-text">{{ review.blurb }}</p>
