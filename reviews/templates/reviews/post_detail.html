@@ -22,21 +22,26 @@
 </div>
 
 <div class="container mt-5">
-  <!-- Display comment counter with icon -->
+  <!-- Display votes with icon -->
   <div class="row">
     <div class="col-12">
-      <strong class="text-secondary">
-        <i class="far fa-comments"></i> {{ comment_count }}
+      <strong>
+        <i class="fa-solid fa-thumbs-up"></i> {{ total_upvotes }}
+        <i class="fa-solid fa-thumbs-down"></i> {{ total_upvotes }}
       </strong>
     </div>
-    <div class="col-12">
-      <hr>
-    </div>
   </div>
+  <hr>
+</div>
 
+<div class="container mt-5">
   <!-- Display Comments here -->
   <div class="row">
     <h3>What our community thinks:</h3>
+    <div class="col-12">
+      <!-- Comment counter with icon -->
+      <i class="far fa-comments"></i> {{ comment_count }}
+    </div>
     <div class="card-body">
       <!-- A for loop inside the empty control tags
           to iterate through each comment in comments -->
@@ -63,22 +68,23 @@
       <!-- The for loop ends here -->
       {% endfor %}
     </div>
-
-    <!-- Add comments -->
-    <div class="card-body">
-      {% if user.is_authenticated %}
-      <h3>{{ user.username }}, have you been to {{ review.location }}?</h3>
-      <p>Tell us more below:</p>
-      <form id="commentForm" method="post" style="margin-top: 1.3em;">
-        {{ comment_form | crispy }}
-        {% csrf_token %}
-        <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
-      </form>
-      {% else %}
-      <p>Log in to give us your opinion</p>
-      {% endif %}
-    </div>
   </div>
+
+  <!-- Add comments -->
+  <div class="card-body">
+    {% if user.is_authenticated %}
+    <h3>{{ user.username }}, have you been to {{ review.location }}?</h3>
+    <p>Tell us more below:</p>
+    <form id="commentForm" method="post" style="margin-top: 1.3em;">
+      {{ comment_form | crispy }}
+      {% csrf_token %}
+      <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+    </form>
+    {% else %}
+    <p>Log in to give us your opinion</p>
+    {% endif %}
+  </div>
+</div>
 </div>
 
 {% endblock content %}
