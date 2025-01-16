@@ -76,14 +76,14 @@ body {
 .page-link {
     color: #ffffff;
     text-decoration: none;
-    background-color: lightcoral;
+    background-color: #f78da7;
     border: none;
     border-radius: 5px;
 }
 
 .page-link:hover {
-    color: lightcoral;
-    border: 2px solid, lightcoral;
+    color: #f78da7;
+    border: 2px solid, #f78da7;
     background-color: #f8f9fa;
 }
 
@@ -129,6 +129,18 @@ form {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+button.btn-secondary {
+    background-color: #ffcbcb; 
+    color: #ffffff;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+button.btn-secondary:hover {
+    background-color: #f78da7; 
+    transform: scale(1.05); 
+}
+
 /* Comments Section */
 .comments {
     background-color: #e8f5e9;
@@ -139,6 +151,13 @@ form {
 
 .comments .approval {
     color: #ff8a80;
+}
+
+/* Meet Us Section */
+img {
+    border-radius: 15px;
+    border: none; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 /* Footer */

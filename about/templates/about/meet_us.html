@@ -6,39 +6,30 @@
 
 <div class="container mt-5">
     <div class="row">
-        <div class="about-img col-4 text-center">
-            <img src="{% static 'images/default.jpg' %}" width="75%">
-        </div>
-        <div class="col-8">
-            <div class="col-8">
-                <!-- Name goes between these h2 tags -->
-                <h2>{{ about.name }}</h2>
-                <!-- Bio goes directly underneath this -->
-                {{ about.bio | safe }}
-            </div>
-            <div class="row">
-                <div class="col text-right">
-                    <!-- Updated on field goes in here -->
-                    <p class="text-end"><em>{{ about.updated_at }}</em></p>
-                </div>
+        <!-- Bio & image left -->
+        <div class="col-md-6">
+            <h2>{{ about.name }}</h2>
+            <p>{{ about.bio | safe }}</p>
+
+            <p class="text-start"><em>{{ about.updated_at }}</em></p>
+
+            <div class="text-left mt-3">
+                <img src="{% static 'images/default.jpg' %}" width="75%" alt="About Image" class="rounded">
             </div>
         </div>
 
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-6 my-5">
-                <h2>Let's collaborate on reviews</h2>
-                <p>Fill out the form below:</p>
-                <!-- Collaborate form -->
+        <!-- Form align right -->
+        <div class="col-md-6">
+            <div class="my-5">
                 <form method="post">
+                    <h3>Let's collaborate on reviews</h3>
+                    <p>Fill out the form below:</p>
                     {{ collaborate_form | crispy }}
                     {% csrf_token %}
-                    <button class="btn btn-secondary"
-                      type="submit">Submit</button>
+                    <button class="btn btn-secondary" type="submit">Send</button>
                 </form>
-
             </div>
         </div>
-
     </div>
 </div>
 

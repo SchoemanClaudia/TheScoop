@@ -1,38 +1,30 @@
-/* styles.css */
-
 /* General Styles */
 body {
     font-family: 'Outfit', sans-serif;
     background-color: #f8f9fa;
-    color: #212529;
+    color: #4a4a4a;
     margin: 0;
     padding: 0;
 }
 
-/* Navbar brand styling */
+/* Navbar Brand Styling */
 .navbar-brand {
     font-family: 'Lobster', sans-serif;
-    color: lightcoral !important;
+    color: #f78da7 !important;
     font-size: 3rem;
     font-weight: bold;
 }
 
 .navbar-nav .nav-link:hover {
-    color: lightpink !important;
-    /* Highlight color on hover/active */
-    background-color: rgba(255, 255, 255, 0.1);
-    /* Slight background hover effect */
+    color: #ffb3c1 !important;
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
-}
-
-/* Responsive navbar toggler icon */
-.navbar-toggler {
-    border: none;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    background: linear-gradient(rgba(255, 203, 203, 0.5),
+            rgba(255, 240, 179, 0.5)),
         url('../images/hero.webp') no-repeat center center/cover;
     color: #ffffff;
     padding: 150px 0;
@@ -51,8 +43,8 @@ body {
 
 /* Review Cards */
 .card {
+    background-color: #ffffff;
     display: flex;
-    /* Ensure all cards have the same height */
     flex-direction: column;
     height: 100%;
     border: none;
@@ -61,28 +53,20 @@ body {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card-body {
-    flex-grow: 1;
-}
-
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.card img {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
 .card-title {
     font-size: 1.25rem;
     font-weight: bold;
+    color: #4d4d4d;
 }
 
 .card-text {
     font-size: 1rem;
-    color: #202020;
+    color: #6b6b6b;
 }
 
 .pagination {
@@ -92,14 +76,14 @@ body {
 .page-link {
     color: #ffffff;
     text-decoration: none;
-    background-color: lightcoral;
+    background-color: #f78da7;
     border: none;
     border-radius: 5px;
 }
 
 .page-link:hover {
-    color: lightcoral;
-    border: 2px solid, lightcoral;
+    color: #f78da7;
+    border: 2px solid, #f78da7;
     background-color: #f8f9fa;
 }
 
@@ -107,14 +91,84 @@ img {
     border-radius: 15px 50px 30px;
 }
 
+/* Buttons */
+.btn {
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-signup {
+    background-color: #e8f5e9;
+    color: #ffffff;
+}
+
+.btn-signup:hover {
+    background-color: #e8f5e9;
+    transform: scale(1.05);
+}
+
+.btn-edit {
+    background-color: #b3e5fc;
+    color: #ffffff;
+}
+
+.btn-delete {
+    background-color: #ffcdd2;
+    color: #ffffff;
+}
+
+/* Form */
+form {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button.btn-secondary {
+    background-color: #ffcbcb; 
+    color: #ffffff;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+button.btn-secondary:hover {
+    background-color: #f78da7; 
+    transform: scale(1.05); 
+}
+
+/* Comments Section */
+.comments {
+    background-color: #e8f5e9;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.comments .approval {
+    color: #ff8a80;
+}
+
+/* Meet Us Section */
+img {
+    border-radius: 15px;
+    border: none; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
 /* Footer */
 footer {
-    background-color: lightpink;
-    color: #212529;
+    background-color: #ffe4e1;
+    color: #4a4a4a;
+    text-align: center;
+    padding: 10px;
 }
 
 footer p {
-    font-size: 70%;
+    font-size: 0.75rem;
     margin: 0;
-    padding: 10px;
 }
