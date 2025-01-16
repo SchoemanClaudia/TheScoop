@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 
 <!-- index.html content starts here -->
@@ -14,39 +14,43 @@
         <div class="card mb-4">
             <div class="card">
                 <a href="{% url 'post_detail' review.slug %}" class="post-link">
-                    <img src="${#.img}" class="card-img-top" alt="{{ review.location }}">
-                    <div class="card-body"> 
-                            <h5 class="card-title">{{ review.location }}</h5>
-                            <p class="card-text">{{ review.blurb }}</p>
+                    {% if "placeholder" in post.featured_image.url %}
+                    <img src="{% static 'images/default.jpg' %}" alt="{{ review.location }}">
+                    {% else %}
+                    <img src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ review.location }}</h5>
+                        <p class="card-text">{{ review.blurb }}</p>
                         <p class="text-warning">{{ review.rating }}</p>
                     </div>
                 </a>
-                </div>
             </div>
         </div>
-        {% if forloop.counter|divisibleby:3 %}
+    </div>
+    {% if forloop.counter|divisibleby:3 %}
 
-        <div class="row">
+    <div class="row">
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    {% if is_paginated %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+            <li>
+                <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a>
+            </li>
             {% endif %}
-            {% endfor %}
-        </div>
-
-            {% if is_paginated %}
-                <nav aria-label="Page navigation">
-                    <ul class="pagination justify-content-center">
-                        {% if page_obj.has_previous %}
-                        <li>
-                            <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a>
-                        </li>
-                        {% endif %}
-                        {% if page_obj.has_next %}
-                        <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-                        {% endif %}
-                    </ul>
-                </nav>
+            {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
             {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
 
-        </div>
+</div>
 
 <!-- index.html content ends here -->
 {% endblock %}

@@ -1,12 +1,14 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import MinValueValidator, MaxValueValidator
+from cloudinary.models import CloudinaryField
 
 # Choices are a sequence of 2-tuples
 STATUS = ((0, "Draft"), (1, "Published"))
 
 # Create your models here.
 class ScoopReview(models.Model):
+    featured_image = CloudinaryField('image', default='placeholder')
     location = models.CharField(max_length=200, unique=True)
     blurb = models.CharField(max_length=100, blank=True)
     slug = models.SlugField(max_length=100, unique=True)
