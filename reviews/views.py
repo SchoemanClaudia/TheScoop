@@ -92,3 +92,20 @@ def comment_edit(request, slug, comment_id):
     else:
         # For GET requests, instantiate a new, empty form
         comment_form = CommentForm()
+
+
+def comment_delete(request, slug, comment_id):
+    """
+    view to delete comment
+    """
+    queryset = ScoopReview.objects.filter(status=1)
+    review = get_object_or_404(queryset, slug=slug)
+    comment = get_object_or_404(ReviewComment, pk=comment_id)
+
+    if comment.critic == request.user:
+        comment.delete()
+        messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
+    else:
+        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+
+    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
