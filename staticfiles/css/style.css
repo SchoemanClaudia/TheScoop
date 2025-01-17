@@ -34,11 +34,39 @@ hr {
     font-weight: bold;
 }
 
+.navbar.sticky-top {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 .navbar-nav .nav-link:hover {
     color: #ffb3c1 !important;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
 }
+
+/* Alert Messages Panel */
+.alert {
+    background-color: #c3e6cb;
+    color: #4d4d4d;
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animation to fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* Hero Section */
 .hero {
@@ -178,7 +206,11 @@ button.btn-secondary:hover {
 }
 
 .comments .approval {
-    color: #ffcbcb;
+    text-align: center;
+    color:#c3e6cb;
+    background-color: #ffffff;
+    border: 1px #c3e6cb;
+    border-radius: 5px;
 }
 
 /* Meet Us Section */
@@ -193,10 +225,26 @@ footer {
     background-color: #b3e5fc;
     color: #4a4a4a;
     text-align: center;
-    padding: 10px;
+    padding: 40px 20px;
+    margin-top: 20px;
 }
 
 footer p {
     font-size: 0.75rem;
-    margin: 0;
+    margin: 0px;
+}
+
+.footer span {
+    display: block; 
+    margin-bottom: 20px; 
+}
+
+.footer i {
+    font-size: 1.5rem;
+    margin: 10px 5px; 
+    color: #4a4a4a; 
+    transition: color 0.3s; 
+}
+.footer i:hover {
+    color: #f78da7; 
 }
