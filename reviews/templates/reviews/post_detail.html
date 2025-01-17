@@ -4,24 +4,34 @@
 {% load crispy_forms_tags %}
 
 <div class="container mt-5">
-  <div class="row">
-    <div class="post-img col-4 text-center">
-      <img src="{% static 'images/default.jpg' %}" width="100%">
+  <div class="row align-items-center">
+    <!-- Image left align -->
+    <div class="post-img col-md-4 text-center">
+      {% if review.featured_image in post.featured_image.url %}
+      <img class="card-img-top" src="{{ review.featured_image.url }}" alt="{{ review.location }}">
+      {% else %}
+      <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="placeholder image">
+      {% endif %}
     </div>
-    <div class="col-8">
+
+    <!-- Review post right align -->
+    <div class="col-md-8">
       <h1 class="post-title">{{ review.location }}</h1>
-      <h3 class="text-warning">{{ review.rating }}</h3>
+      <h2>
+        <strong class="text-warning">{{ review.rating }}</strong>
+      </h2>
       <p class="post-subtitle">{{ review.critic }} | {{ review.created_at }}</p>
       <br>
       <h3 class="post-subtitle">{{ review.blurb | safe }}</h3>
       <br>
       <p class="card-text">
         {{ review.review | safe }}
+      </p>
     </div>
   </div>
 </div>
 
-<div class="container mt-5">
+<!-- <div class="container mt-5">
   <div class="row">
     <div class="col-12">
       <strong>
@@ -29,10 +39,9 @@
         <i class="fa-solid fa-thumbs-down"></i> {{ total_upvotes }}
       </strong>
     </div>
-  </div>
-  <hr>
+  </div>-->
 </div>
-
+<hr>
 <div class="container mt-5">
   <div class="row">
     <!-- Comments leaft align -->
@@ -49,7 +58,7 @@
           <p class="font-weight-bold">
             {{ comment.critic }}
             <span class="font-weight-normal">
-              {{ comment.created_at }}
+              <i class="fa-solid fa-ice-cream"></i> {{ comment.created_at }}
             </span> wrote:
           </p>
           <div id="comment{{ comment.id }}">
@@ -82,7 +91,7 @@
           <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
         </form>
         {% else %}
-        <p>Log in to give us your opinion</p>
+        <p class="text-center">Log in to give us your opinion</p>
         {% endif %}
       </div>
     </div>
