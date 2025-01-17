@@ -61,6 +61,7 @@ hr {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -89,6 +90,10 @@ hr {
 }
 
 /* Review Cards */
+img {
+    border-radius: 15px 50px 30px;
+}
+
 .card {
     background-color: #ffffff;
     display: flex;
@@ -118,6 +123,17 @@ hr {
 .card-text {
     font-size: 1rem;
     color: #6b6b6b;
+    padding: 10px;
+}
+
+.post-text {
+    font-size: 1rem;
+    color: #6b6b6b;
+    padding-right: 30px;
+}
+
+.text-rating {
+    color: gold;
 }
 
 .pagination {
@@ -136,10 +152,6 @@ hr {
     color: #f78da7;
     border: 2px solid, #f78da7;
     background-color: #f8f9fa;
-}
-
-img {
-    border-radius: 15px 50px 30px;
 }
 
 /* Buttons */
@@ -163,13 +175,29 @@ img {
 }
 
 .btn-edit {
+    background-color: #f8f9fa;
+    color: #4d4d4d;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-edit:hover {
     background-color: #b3e5fc;
     color: #4d4d4d;
+    text-decoration: none;
 }
 
 .btn-delete {
+    background-color: #f8f9fa;
+    color: #4d4d4d;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-delete:hover {
     background-color: #ffcbcb;
     color: #4d4d4d;
+    text-decoration: none;
 }
 
 /* Form */
@@ -180,7 +208,7 @@ form {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-button.btn-secondary {
+button.btn-primary button.btn-secondary {
     background-color: #ffcbcb;
     color: #4d4d4d;
     border-radius: 50px;
@@ -194,7 +222,7 @@ button.btn-secondary:hover {
 
 /* Review Post Page */
 .post-img {
-    padding: 15px;
+    padding-top: 20px;
 }
 
 /* Comments Section */
@@ -207,7 +235,7 @@ button.btn-secondary:hover {
 
 .comments .approval {
     text-align: center;
-    color:#c3e6cb;
+    color: #c3e6cb;
     background-color: #ffffff;
     border: 1px #c3e6cb;
     border-radius: 5px;
@@ -235,16 +263,17 @@ footer p {
 }
 
 .footer span {
-    display: block; 
-    margin-bottom: 20px; 
+    display: block;
+    margin-bottom: 20px;
 }
 
 .footer i {
     font-size: 1.5rem;
-    margin: 10px 5px; 
-    color: #4a4a4a; 
-    transition: color 0.3s; 
+    margin: 10px 5px;
+    color: #4a4a4a;
+    transition: color 0.3s;
 }
+
 .footer i:hover {
-    color: #f78da7; 
+    color: #f78da7;
 }
