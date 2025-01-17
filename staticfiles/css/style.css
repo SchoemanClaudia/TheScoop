@@ -7,7 +7,26 @@ body {
     padding: 0;
 }
 
-/* Navbar Brand Styling */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: inherit;
+    background-color: transparent;
+}
+
+a:active {
+    color: inherit;
+    background-color: transparent;
+}
+
+hr {
+    margin-top: 3.5em;
+}
+
+/* Navbar Section */
 .navbar-brand {
     font-family: 'Lobster', sans-serif;
     color: #f78da7 !important;
@@ -50,12 +69,16 @@ body {
     border: none;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Brings card to front on hover */
+    z-index: 10;
 }
 
 .card-title {
@@ -70,7 +93,7 @@ body {
 }
 
 .pagination {
-    padding-top: 2em;
+    padding-top: 3.5em;
 }
 
 .page-link {
@@ -102,23 +125,23 @@ img {
 }
 
 .btn-signup {
-    background-color: #e8f5e9;
-    color: #ffffff;
+    background-color: #b3e5fc;
+    color: #4d4d4d;
 }
 
 .btn-signup:hover {
-    background-color: #e8f5e9;
+    background-color: #f78da7;
     transform: scale(1.05);
 }
 
 .btn-edit {
     background-color: #b3e5fc;
-    color: #ffffff;
+    color: #4d4d4d;
 }
 
 .btn-delete {
-    background-color: #ffcdd2;
-    color: #ffffff;
+    background-color: #ffcbcb;
+    color: #4d4d4d;
 }
 
 /* Form */
@@ -130,15 +153,20 @@ form {
 }
 
 button.btn-secondary {
-    background-color: #ffcbcb; 
-    color: #ffffff;
+    background-color: #ffcbcb;
+    color: #4d4d4d;
     border-radius: 50px;
     font-weight: bold;
 }
 
 button.btn-secondary:hover {
-    background-color: #f78da7; 
-    transform: scale(1.05); 
+    background-color: #f78da7;
+    transform: scale(1.05);
+}
+
+/* Review Post Page */
+.post-img {
+    padding: 15px;
 }
 
 /* Comments Section */
@@ -150,19 +178,19 @@ button.btn-secondary:hover {
 }
 
 .comments .approval {
-    color: #ff8a80;
+    color: #ffcbcb;
 }
 
 /* Meet Us Section */
 img {
     border-radius: 15px;
-    border: none; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer */
 footer {
-    background-color: #ffe4e1;
+    background-color: #b3e5fc;
     color: #4a4a4a;
     text-align: center;
     padding: 10px;
