@@ -9,19 +9,17 @@
         <!-- Bio & image left -->
         <div class="col-md-6">
             <h2>{{ about.name }}</h2>
-            <p>{{ about.bio | safe }}</p>
-
             <p class="text-start"><em>{{ about.updated_at }}</em></p>
 
             <div class="text-left mt-3 rounded">
                 {% if "placeholder" in about.avatar_image.url %}
-                <img src="{% static 'images/profile.jpg' %}" width="40%"
-                  alt="placeholder image" >
+                <img src="{% static 'images/profile.jpg' %}" width="40%" alt="placeholder image">
                 {% else %}
-                <img src="{{ about.avatar_image.url }}" width="40%"
-                  alt="{{ about.title }}">
+                <img src="{{ about.avatar_image.url }}" width="90%" alt="{{ about.title }}">
                 {% endif %}
             </div>
+
+            <p>{{ about.bio | safe }}</p>
         </div>
 
         <!-- Form align right -->

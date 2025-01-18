@@ -45,8 +45,8 @@ class ReviewComment(models.Model):
     comment = models.TextField()
     accept = models.BooleanField(default=False)
     created_at = models.DateField(auto_now_add=True)
-    upvotes = models.IntegerField(default=0)  
-    downvotes = models.IntegerField(default=0) 
+    # upvotes = models.IntegerField(default=0)  
+    # downvotes = models.IntegerField(default=0) 
 
     class Meta:
         ordering = ["-created_at"]

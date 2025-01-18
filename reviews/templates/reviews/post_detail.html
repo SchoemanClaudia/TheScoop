@@ -83,9 +83,9 @@
     <div class="col-md-6">
       <div class="card-body">
         {% if user.is_authenticated %}
-        <h3>{{ user.username }}, have you been to {{ review.location }}?</h3>
-        <p>Tell us more below:</p>
         <form id="commentForm" method="post" style="margin-top: 1.3em;">
+          <h3>{{ user.username }}, have you been to {{ review.location }}?</h3>
+          <p>Tell us more below:</p>
           {{ comment_form | crispy }}
           {% csrf_token %}
           <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
