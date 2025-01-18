@@ -30,8 +30,8 @@ def post_detail(request, slug):
     review = get_object_or_404(queryset, slug=slug)
     comments = review.review_location.all().order_by("-created_at")
     comment_count = review.review_location.filter(accept=True).count()
-    total_upvotes = sum(comment.upvotes for comment in comments)
-    total_downvotes = sum(comment.downvotes for comment in comments)
+    # total_upvotes = sum(comment.upvotes for comment in comments)
+    # total_downvotes = sum(comment.downvotes for comment in comments)
 
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
@@ -58,8 +58,8 @@ def post_detail(request, slug):
             "review": review,
             "comments": comments,
             "comment_count": comment_count,
-            "total_upvotes": total_upvotes,
-            "total_downvotes": total_downvotes,
+            # "total_upvotes": total_upvotes,
+            # "total_downvotes": total_downvotes,
             "comment_form": comment_form,
         },
     )
