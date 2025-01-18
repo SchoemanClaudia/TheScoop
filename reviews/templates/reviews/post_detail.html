@@ -22,10 +22,10 @@
 
     <!-- Image right align -->
     <div class="post-img col-md-4 text-center">
-      {% if review.featured_image in post.featured_image.url %}
-      <img class="card-img-top" src="{{ review.featured_image.url }}" alt="{{ review.location }}">
-      {% else %}
+      {% if "placeholder" in review.featured_image.url %}
       <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="placeholder image">
+      {% else %}
+      <img class="card-img-top" src=" {{ review.featured_image.url }}" alt="{{ review.location }}">
       {% endif %}
     </div>
   </div>

@@ -15,10 +15,10 @@
             <div class="card">
                 <a href="{% url 'post_detail' review.slug %}" class="post-link">
                     <div class="image-container">
-                        {% if review.featured_image in post.featured_image.url %}
-                        <img class="card-img-top" src="{{ review.featured_image.url }}" alt="{{ review.location }}">
-                        {% else %}
+                        {% if "placeholder" in review.featured_image.url %}
                         <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="placeholder image">
+                        {% else %}
+                        <img class="card-img-top" src=" {{ review.featured_image.url }}" alt="{{ review.location }}">
                         {% endif %}
                     </div>
                     <div class="card-body text-center">
