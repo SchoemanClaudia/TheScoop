@@ -13,8 +13,14 @@
 
             <p class="text-start"><em>{{ about.updated_at }}</em></p>
 
-            <div class="text-left mt-3">
-                <img src="{% static 'images/default.jpg' %}" width="75%" alt="About Image" class="rounded">
+            <div class="text-left mt-3 rounded">
+                {% if "placeholder" in about.avatar_image.url %}
+                <img src="{% static 'images/profile.jpg' %}" width="40%"
+                  alt="placeholder image" >
+                {% else %}
+                <img src="{{ about.avatar_image.url }}" width="40%"
+                  alt="{{ about.title }}">
+                {% endif %}
             </div>
         </div>
 
