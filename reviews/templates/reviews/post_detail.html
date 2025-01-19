@@ -11,13 +11,16 @@
       <h2>
         <strong class="text-rating">{{ review.rating }}</strong>
       </h2>
-      <p class="post-subtitle">{{ review.critic }} | {{ review.created_at }}</p>
       <br>
       <h3 class="post-subtitle">{{ review.blurb | safe }}</h3>
+      <p class="map-text">
+        <a href="{{ review.directions }}" target="_blank"><i class="fa-solid fa-map-location-dot"></i> Get Directions</a>
+      </p>
       <br>
       <p class="post-text">
         {{ review.review | safe }}
       </p>
+      <p class="critic-text">{{ review.critic }} | {{ review.created_at }}</p>
     </div>
 
     <!-- Image right align -->

@@ -132,6 +132,19 @@ img {
     padding-right: 30px;
 }
 
+.map-text {
+    color: #6b6b6b;
+}
+
+.map-text:hover {
+    color: gold;
+}
+
+.critic-text {
+    font-size: 75%;
+    color: #6b6b6b;
+}
+
 .text-rating {
     color: gold;
 }

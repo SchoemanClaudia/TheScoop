@@ -8,10 +8,12 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 # Create your models here.
 class ScoopReview(models.Model):
-    featured_image = CloudinaryField('image', default='placeholder')
     location = models.CharField(max_length=200, unique=True)
     blurb = models.CharField(max_length=100, blank=True)
     slug = models.SlugField(max_length=100, unique=True)
+    featured_image = CloudinaryField('image', default='placeholder')
+    directions = models.URLField(max_length=2000, blank=True, unique=True, 
+        null=True, help_text="Map URL goes here")
     review = models.TextField()
     # Rating out of 5
     rating = models.DecimalField(
