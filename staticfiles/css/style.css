@@ -163,7 +163,7 @@ img {
 
 .page-link:hover {
     color: #f78da7;
-    border: 2px solid, #f78da7;
+    border: 2px solid #f78da7;
     background-color: #f8f9fa;
 }
 
@@ -253,6 +253,7 @@ button.btn-secondary:hover {
     background-color: #ffffff;
     border: 1px #c3e6cb;
     border-radius: 5px;
+    margin-top: 5px;
 }
 
 /* Meet Us Section */
@@ -260,6 +261,18 @@ img {
     border-radius: 15px;
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-img {
+    width: 40%;
+}
+
+.about-img {
+    width: 90%;
+}
+
+.bio {
+    padding-right: 20px;
 }
 
 /* Footer */
