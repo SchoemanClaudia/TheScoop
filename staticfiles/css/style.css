@@ -207,9 +207,20 @@ img {
     border-radius: 5px;
 }
 
+.btn-cancel {
+    background-color: #6b6b6b;
+    color: #f8f9fa;
+    text-decoration: none;
+}
+
+.btn-cancel:hover {
+    background-color: #4d4d4d;
+    color: #f8f9fa;
+}
+
 .btn-delete:hover {
-    background-color: #ffcbcb;
-    color: #4d4d4d;
+    background-color: #dc3545;
+    color: #f8f9fa;
     text-decoration: none;
 }
 
