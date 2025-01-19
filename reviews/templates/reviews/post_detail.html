@@ -91,7 +91,8 @@
           <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
         </form>
         {% else %}
-        <p class="text-center">Log in to give us your opinion</p>
+        <p class="text-center">
+          <a class="link" href="{{ login_url }}"><u>Log in here</u></a> to give us your opinion</p>
         {% endif %}
       </div>
     </div>
