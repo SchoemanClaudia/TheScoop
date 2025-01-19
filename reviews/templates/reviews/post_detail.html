@@ -5,6 +5,7 @@
 
 <div class="container mt-5">
   <div class="row align-items-center">
+
     <!-- Review post left align -->
     <div class="col-md-8">
       <h1 class="post-title">{{ review.location }}</h1>
@@ -14,9 +15,15 @@
       <br>
       <h3 class="post-subtitle">{{ review.blurb | safe }}</h3>
       <p class="map-text">
-        <a href="{{ review.directions }}" target="_blank"><i class="fa-solid fa-map-location-dot"></i> Get Directions</a>
+        {% if review.directions %}
+        <a href="{{ review.directions }}" target="_blank">
+          <i class="fa-solid fa-map-location-dot"></i> Get Directions
+        </a>
+        {% else %}
+        <!-- Empty placeholder if no directions URL provided -->
+        &nbsp;
+        {% endif %}
       </p>
-      <br>
       <p class="post-text">
         {{ review.review | safe }}
       </p>
