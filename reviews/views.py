@@ -7,6 +7,17 @@ from .forms import CommentForm
 
 
 class ReviewList(generic.ListView):
+    """
+    Display a list of approved :model:`reviews.ScoopReview`.
+
+    **Context**
+    ``reviews``
+        A list of :model:`reviews.ScoopReview` 
+        objects with status=1.
+
+    **Template:**
+    :template:`reviews/index.html`
+    """
     queryset = ScoopReview.objects.filter(status=1)
     template_name = "reviews/index.html"
     paginate_by = 3
@@ -17,12 +28,19 @@ def post_detail(request, slug):
     Display an individual :model:`reviews.ScoopReview`.
 
     **Context**
-
     ``reviews``
-        An instance of :model:`reviews.ScoopReview`.
+        An instance of :model:`reviews.ScoopReview` 
+        retrieved by slug.
+    ``comments``
+        A list of :model:`reviews.ReviewComment` 
+        associated with the review.
+    ``comment_count``
+        The count of approved comments for the review.
+    ``comment_form``
+        An instance of :model:`reviews.CommentForm` 
+        for submitting new comments.
 
     **Template:**
-
     :template:`reviews/post_detail.html`
     """
 
@@ -63,7 +81,21 @@ def post_detail(request, slug):
 
 def comment_edit(request, slug, comment_id):
     """
-    View to edit comments
+    Edit an existing :model:`reviews.ReviewComment`.
+
+    **Context**
+    ``review``
+        The :model:`reviews.ScoopReview` 
+        associated with the comment.
+    ``comment``
+        The :model:`reviews.ReviewComment` 
+        being edited.
+    ``comment_form``
+        An instance of :model:`reviews.CommentForm` 
+        for editing the comment.
+
+    **Template:**
+    :template:`reviews/post_detail.html`
     """
     # Fetch the review and comment
     review = get_object_or_404(ScoopReview, slug=slug)
@@ -101,7 +133,18 @@ def comment_edit(request, slug, comment_id):
 
 def comment_delete(request, slug, comment_id):
     """
-    view to delete comment
+    Delete a :model:`reviews.ReviewComment`.
+
+    **Context**
+    ``review``
+        The :model:`reviews.ScoopReview` 
+        associated with the comment.
+    ``comment``
+        The :model:`reviews.ReviewComment` 
+        being deleted.
+
+    **Template:**
+    :template:`reviews/post_detail.html`
     """
     queryset = ScoopReview.objects.filter(status=1)
     review = get_object_or_404(queryset, slug=slug)

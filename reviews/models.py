@@ -9,6 +9,12 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class ScoopReview(models.Model):
+    """
+    Stores review of a location, including rating, 
+    review text, and image, related to :model:`auth.User`.
+    Data retrieved from critic review of a location 
+    and includes an optional map URL.
+    """
     location = models.CharField(max_length=200, unique=True)
     blurb = models.CharField(max_length=100, blank=True)
     slug = models.SlugField(max_length=100, unique=True)
@@ -43,6 +49,12 @@ class ScoopReview(models.Model):
 
 
 class ReviewComment(models.Model):
+    """
+    Stores comment on a specific review, related to 
+    :model:`blog.ScoopReview` and :model:`auth.User`.
+    Data retrieved from critic comment on a location 
+    review and includes a flag to be reviewed and accepeted.
+    """
     review = models.ForeignKey(
         ScoopReview, on_delete=models.CASCADE, related_name="review_location")
     critic = models.ForeignKey(

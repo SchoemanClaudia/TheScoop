@@ -6,7 +6,19 @@ from .forms import CollaborateForm
 
 def meet_us(request):
     """
-    Renders the Meet Us page
+    Renders the Meet Us page.
+
+    **Context**
+    ``about``
+        Displays an individual instance of :model:`about.About` 
+        containing the most recent 'About' information, 
+        ordered by `updated_at` in descending order.
+    ``collaborate_form``
+        An instance of :forms:`about.CollaborateForm`, 
+        used for submitting collaboration inquiries.
+
+    **Template:**
+    :template:`about/meet_us.html`
     """
     if request.method == "POST":
         collaborate_form = CollaborateForm(data=request.POST)
