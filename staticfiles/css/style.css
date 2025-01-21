@@ -79,12 +79,21 @@ hr {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-.hero h1 {
+.hero-error {
+    background: linear-gradient(rgba(255, 203, 203, 0.5),
+            rgba(255, 240, 179, 0.5)),
+        url('../images/hero-error.webp') no-repeat center center/cover;
+    color: #ffffff;
+    padding: 150px 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero .hero-error h1 {
     font-size: 3rem;
     font-weight: bold;
 }
 
-.hero p {
+.hero .hero-error p {
     font-size: 1.5rem;
     margin-top: 10px;
 }

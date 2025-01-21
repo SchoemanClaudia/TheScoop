@@ -1,11 +1,18 @@
-{% extends 'base.html %'} 
+{% extends 'base.html' %}
 {% load static %}
+
+{% block header %}
+<header class="hero-error text-center">
+    <div class="container">
+        <h1 class="display-4"><em>403 Unauthroized Access</em></h1>
+        <p class="lead">Whoops, you can't access that</p>
+    </div>
+</header>
+{% endblock %}
+
 {% block content %}
-
 <div class="container text-center">
-    <h1>403 Unauthroized Access</h1>
-    <p>You are not authorized to perform this action...</p>
-    <a href="{% url 'home' %}" class="btn btn-primary">Home</a>
+    <p>You are not authorized to perform this action</p>
+    <a href="{% url 'home' %}" class="btn btn-signup">Go Back to Home</a>
 </div>
-
 {% endblock %}

@@ -51,18 +51,18 @@
                             href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == about_url %}active"
-                        aria-current="page{% endif %}" href="{% url 'about' %}">Meet Us</a>
+                        <a class="nav-link {% if request.path == about_url %}active" aria-current="page{% endif %}"
+                            href="{% url 'about' %}">Meet Us</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == logout_url %}active"
-                        aria-current="page{% endif %}" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}"
+                            href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == signup_url %}active"
-                        aria-current="page{% endif %}" href="{% url 'account_signup' %}">Register</a>
+                        <a class="nav-link {% if request.path == signup_url %}active" aria-current="page{% endif %}"
+                            href="{% url 'account_signup' %}">Register</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == login_url %}active" aria-current="page{% endif %}"
@@ -96,12 +96,14 @@
     </div>
 
     <!-- Header Section -->
+    {% block header %}
     <header class="hero text-center">
         <div class="container">
             <h1 class="display-4">Whats the scoop?</h1>
             <p class="lead">Your ultimate guide to the best ice cream in town!</p>
         </div>
     </header>
+    {% endblock %}
 
     <!-- Main Section -->
     <main class="container my-5">
@@ -133,4 +135,5 @@
     {% block extras %}
     {% endblock %}
 </body>
+
 </html>
