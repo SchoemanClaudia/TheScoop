@@ -276,6 +276,21 @@ button.btn-secondary:hover {
     margin-top: 5px;
 }
 
+form .errorlist.nonfield li {
+    color: #dc3545;
+    font-size: 90%;
+}
+
+.signup .errorlist li {
+    color: #dc3545;
+    font-size: 90%;
+}
+
+.signup ul li {
+    color: #6b6b6b;
+    font-size: 75%;
+}
+
 /* Meet Us Section */
 img {
     border-radius: 15px;
