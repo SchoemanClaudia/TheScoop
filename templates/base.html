@@ -81,6 +81,16 @@
         </div>
     </nav>
 
+    <!-- Header Section -->
+    {% block header %}
+    <header class="hero text-center">
+        <div class="container">
+            <h1 class="display-4">Whats the scoop?</h1>
+            <p class="lead">Your ultimate guide to the best ice cream in town!</p>
+        </div>
+    </header>
+    {% endblock %}
+
     <!-- Django Messages -->
     <div class="container mt-3">
         <div class="row">
@@ -94,16 +104,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Header Section -->
-    {% block header %}
-    <header class="hero text-center">
-        <div class="container">
-            <h1 class="display-4">Whats the scoop?</h1>
-            <p class="lead">Your ultimate guide to the best ice cream in town!</p>
-        </div>
-    </header>
-    {% endblock %}
 
     <!-- Main Section -->
     <main class="container my-5">

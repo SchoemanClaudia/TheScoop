@@ -68,7 +68,6 @@ hr {
     }
 }
 
-
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(255, 203, 203, 0.5),
@@ -277,7 +276,7 @@ button.btn-secondary:hover {
 }
 
 form .errorlist.nonfield li {
-    color:#dc3545;
+    color: #dc3545;
     font-size: 90%;
 }
 
