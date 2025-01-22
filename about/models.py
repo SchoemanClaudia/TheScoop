@@ -4,8 +4,8 @@ from cloudinary.models import CloudinaryField
 
 class About(models.Model):
     """
-    Stores information about an individual, 
-    including user name, bio and avatar image. 
+    Stores information about an individual,
+    including user name, bio and avatar image.
     """
     name = models.CharField(max_length=200)
     bio = models.TextField()
@@ -18,9 +18,9 @@ class About(models.Model):
 
 class CollaborateRequest(models.Model):
     """
-    Stores a collaboration request with a 
-    name, email, message, and a flag indicating 
-    whether the request has been read. 
+    Stores a collaboration request with a
+    name, email, message, and a flag indicating
+    whether the request has been read.
     """
     name = models.CharField(max_length=200)
     email = models.EmailField()

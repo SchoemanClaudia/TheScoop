@@ -167,6 +167,8 @@ img {
     background-color: #f78da7;
     border: none;
     border-radius: 5px;
+    padding: 10px;
+    margin: 15px;
 }
 
 .page-link:hover {

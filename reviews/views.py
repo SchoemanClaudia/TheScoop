@@ -12,7 +12,7 @@ class ReviewList(generic.ListView):
 
     **Context**
     ``reviews``
-        A list of :model:`reviews.ScoopReview` 
+        A list of :model:`reviews.ScoopReview`
         objects with status=1.
 
     **Template:**
@@ -29,15 +29,15 @@ def post_detail(request, slug):
 
     **Context**
     ``reviews``
-        An instance of :model:`reviews.ScoopReview` 
+        An instance of :model:`reviews.ScoopReview`
         retrieved by slug.
     ``comments``
-        A list of :model:`reviews.ReviewComment` 
+        A list of :model:`reviews.ReviewComment`
         associated with the review.
     ``comment_count``
         The count of approved comments for the review.
     ``comment_form``
-        An instance of :model:`reviews.CommentForm` 
+        An instance of :model:`reviews.CommentForm`
         for submitting new comments.
 
     **Template:**
@@ -85,13 +85,13 @@ def comment_edit(request, slug, comment_id):
 
     **Context**
     ``review``
-        The :model:`reviews.ScoopReview` 
+        The :model:`reviews.ScoopReview`
         associated with the comment.
     ``comment``
-        The :model:`reviews.ReviewComment` 
+        The :model:`reviews.ReviewComment`
         being edited.
     ``comment_form``
-        An instance of :model:`reviews.CommentForm` 
+        An instance of :model:`reviews.CommentForm`
         for editing the comment.
 
     **Template:**
@@ -137,10 +137,10 @@ def comment_delete(request, slug, comment_id):
 
     **Context**
     ``review``
-        The :model:`reviews.ScoopReview` 
+        The :model:`reviews.ScoopReview`
         associated with the comment.
     ``comment``
-        The :model:`reviews.ReviewComment` 
+        The :model:`reviews.ReviewComment`
         being deleted.
 
     **Template:**

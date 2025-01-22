@@ -10,11 +10,11 @@ def meet_us(request):
 
     **Context**
     ``about``
-        Displays an individual instance of :model:`about.About` 
-        containing the most recent 'About' information, 
+        Displays an individual instance of :model:`about.About`
+        containing the most recent 'About' information,
         ordered by `updated_at` in descending order.
     ``collaborate_form``
-        An instance of :forms:`about.CollaborateForm`, 
+        An instance of :forms:`about.CollaborateForm`,
         used for submitting collaboration inquiries.
 
     **Template:**
