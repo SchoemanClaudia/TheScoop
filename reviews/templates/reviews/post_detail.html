@@ -115,6 +115,13 @@
         <form id="commentForm" class="errorlist nonfield" method="post" style="margin-top: 1.3em;">
           <h3>{{ user.username }}, have you been to {{ review.location }}?</h3>
           <p>Tell us more below:</p>
+
+          <div class="alert-success text-center">
+            {% for message in messages %}
+            <p>{{ message }}</p>
+            {% endfor %}
+          </div>
+
           {{ comment_form | crispy }}
           {% csrf_token %}
           <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
