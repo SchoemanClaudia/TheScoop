@@ -24,9 +24,7 @@ def meet_us(request):
         collaborate_form = CollaborateForm(data=request.POST)
         if collaborate_form.is_valid():
             collaborate_form.save()
-            messages.add_message
-            (request, messages.SUCCESS,
-                "Thank you for your message, we will get back to you soon.")
+            messages.success(request, "Your message was sent successfully.")
 
     about = About.objects.all().order_by('-updated_at').first()
     collaborate_form = CollaborateForm()

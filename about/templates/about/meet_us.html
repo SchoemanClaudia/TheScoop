@@ -34,6 +34,14 @@
                     <h3>Send us your suggestions</h3>
                     <h5>Let us know which spots you think we should visit next!</h5>
                     <p>Fill out the form below:</p>
+                    {% if messages %}
+                    <div class="alert-success text-center">
+                        {% for message in messages %}
+                        <p>Thank you for your message, we will get back to you soon.</p>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+
                     {{ collaborate_form | crispy }}
                     {% csrf_token %}
                     <button class="btn btn-secondary" type="submit">Send</button>
