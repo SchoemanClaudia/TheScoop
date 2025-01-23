@@ -14,15 +14,18 @@ class ReviewsAdmin(SummernoteModelAdmin):
     """
     list_display = ('location', 'status', 'critic', 'created_at')
     search_fields = ['location', 'review']
-    list_filter = ('critic', 'status', 'created_at')
+    list_filter = ('status', 'created_at')
     prepopulated_fields = {'slug': ('location',)}
     summernote_fields = ('review',)
 
 
-admin.site.register(ReviewComment)
-"""
-Stores a comment entry related to
-:model:`auth.User` and :model:`blog.Post`.
-Data is fetched from the ReviewComment model
-and displayed in the admin interface.
-"""
+@admin.register(ReviewComment)
+class ReviewCommentAdmin(SummernoteModelAdmin):
+    """
+    Stores a comment entry related to
+    :model:`auth.User` and :model:`reviews.ReviewComment`.
+    Data is fetched from the ReviewComment model
+    and displayed in the admin interface.
+    """
+    list_display = ('comment', 'created_at', 'accept', 'review', 'critic')
+    list_filter = ('accept', 'created_at', 'review')

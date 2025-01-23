@@ -10,7 +10,7 @@ class AboutAdmin(SummernoteModelAdmin):
     Stores information about the user biography.
     Data for 'bio' is edited using the Summernote widget.
     """
-    summernote_fields = ('bio',)
+    summernote_fields = ('bio')
 
 # Note: admin.ModelAdmin is the standard way of registering
 #       our model with the admin panel. We do it differently
