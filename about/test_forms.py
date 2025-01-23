@@ -32,7 +32,7 @@ class TestCollaborateForm(TestCase):
         """Test for the 'email' field"""
         form = CollaborateForm({
             'name': 'Matt',
-            'email': '',
+            'email': 'invalid-email',
             'message': 'Hello!'
         })
         self.assertFalse(

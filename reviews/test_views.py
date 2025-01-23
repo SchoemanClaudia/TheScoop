@@ -12,8 +12,8 @@ class TestBlogViews(TestCase):
             password="myPassword",
             email="test@test.com"
         )
-        self.post = ScoopReviewt(title="Reviews location", critic=self.user,
-                         slug="reviews-location", excerpt="Reviews blurb",
+        self.post = ScoopReview(location="Reviews location", critic=self.user,
+                         slug="reviews-location", blurb="Reviews blurb",
                          review="Reviews review", status=1)
         self.post.save()
 
@@ -25,15 +25,3 @@ class TestBlogViews(TestCase):
         self.assertIn(b"Reviews review", response.content)
         self.assertIsInstance(
             response.context['comment_form'], CommentForm)
-    
-    def test_successful_collaboration_request_submission(self):
-        """Test for a user requesting a collaboration"""
-        post_data = {
-            'name': 'test name',
-            'email': 'test@email.com',
-            'message': 'test message'
-        }
-        response = self.client.post(reverse('about'), post_data)
-        self.assertEqual(response.status_code, 200)
-        self.assertIn(
-            b'Collaboration request received! I endeavour to respond within 2 working days.', response.content)
