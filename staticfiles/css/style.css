@@ -29,7 +29,7 @@ hr {
 /* Navbar Section */
 .navbar-brand {
     font-family: 'Lobster', sans-serif;
-    color: #f78da7 !important;
+    color: #db006a !important;
     font-size: 3rem;
     font-weight: bold;
 }
@@ -97,6 +97,10 @@ hr {
     margin-top: 10px;
 }
 
+.text-end {
+    color: #4a4a4a;
+}
+
 /* Review Cards */
 img {
     border-radius: 15px 50px 30px;
@@ -145,7 +149,7 @@ img {
 }
 
 .map-text:hover {
-    color: gold;
+    color: #db006a;
 }
 
 .critic-text {
@@ -154,7 +158,7 @@ img {
 }
 
 .text-rating {
-    color: gold;
+    color: #db006a;
 }
 
 .pagination {
@@ -164,7 +168,7 @@ img {
 .page-link {
     color: #ffffff;
     text-decoration: none;
-    background-color: #f78da7;
+    background-color: #db006a;
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -172,8 +176,8 @@ img {
 }
 
 .page-link:hover {
-    color: #f78da7;
-    border: 2px solid #f78da7;
+    color: #db006a;
+    border: 2px solid #db006a;
     background-color: #f8f9fa;
 }
 
