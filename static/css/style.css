@@ -39,7 +39,7 @@ hr {
 }
 
 .navbar-nav .nav-link:hover {
-    color: #ffb3c1 !important;
+    color: #db006a !important;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
 }
@@ -197,7 +197,8 @@ img {
 }
 
 .btn-signup:hover {
-    background-color: #f78da7;
+    background-color: #db006a;
+    color: #ffffff;
     transform: scale(1.05);
 }
 
@@ -248,14 +249,14 @@ form {
 }
 
 button.btn-primary button.btn-secondary {
-    background-color: #ffcbcb;
-    color: #4d4d4d;
+    background-color: #db006a;
+    color: #ffffff;
     border-radius: 50px;
     font-weight: bold;
 }
 
 button.btn-secondary:hover {
-    background-color: #f78da7;
+    background-color: #db006a;
     transform: scale(1.05);
 }
 
@@ -342,5 +343,5 @@ footer p {
 }
 
 .footer i:hover {
-    color: #f78da7;
+    color: #db006a;
 }
