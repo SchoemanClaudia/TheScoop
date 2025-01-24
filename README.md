@@ -29,7 +29,7 @@ The Scoop provides an easy and engaging way to explore, share, and manage ice cr
 
 __Existing features:__
  
-- <b>Homepage with Ice Cream Reviews:</b>
+- **Homepage with Ice Cream Reviews:**
 
   - Main Section:
     - The homepage serves as the primary destination for new visitors, showcasing ice cream reviews in a clean, organized layout.
@@ -46,14 +46,14 @@ __Existing features:__
 
     ![Review cards](static/images/review-cards.webp)
 
-- <b>User Account System:</b>
+- **User Account System:**
 
   - Sign-Up & Login: 
     - Users can create an account, log in, and track their favorite reviews, making the experience personalized. The system supports basic user authentication (using Django’s authentication features).
 
     ![Login](static/images/login.webp)  ![Register](static/images/register.webp)
 
-- <b>Interactive Review Pages:</b>
+- **Interactive Review Pages:**
 
   - Detailed Reviews: 
     - Each location review page contains in-depth content, including:
@@ -70,20 +70,20 @@ __Existing features:__
 
     ![Comments Panel](statics/images/comments-panel.webp) 
 
-- <b>Comments System (CRUD):</b>
+- **Comments System (CRUD):**
 
   - Users can submit, view, and edit their comments. 
     - These comments contribute to building a community-driven platform where opinions and suggestions about ice cream spots are shared.
   
   - A CRUD functionality allows users to leave comments, which entails:
-    - <b>Create</b> a new comment on a review page (upon login).
-    - <b>Read</b> all existing comments, allowing users to engage with past opinions.
-    - <b>Update</b> their own comments if they wish to modify them.
-    - <b>Delete</b> their comments if needed.
+    - **Create** a new comment on a review page (upon login).
+    - **Read** all existing comments, allowing users to engage with past opinions.
+    - **Update** their own comments if they wish to modify them.
+    - **Delete** their comments if needed.
 
     ![Comment](statics/images/comment.webp) | ![Edit](static/images/edit.webp) | ![Delete](static/images/delete.webp)
 
-- <b>Contact and Suggestion Form:</b>
+- **Contact and Suggestion Form:**
 
   - User Engagement:
     - A contact form allows users to submit suggestions for new ice cream spots they’d like to see reviewed. 
@@ -97,7 +97,7 @@ __Existing features:__
 
   ![Contact form](static/images/contact-form.webp)
 
-- <b>Social Media Integration:</b>
+- **Social Media Integration:**
 
   - The website provides quick access to the brand’s social media profiles (Instagram and Twitter). 
     - Allowing users to follow along on their ice cream journey and stay updated on new reviews and content.
@@ -106,7 +106,7 @@ __Existing features:__
 
    ![Footer](static/images/Footer.webp)
 
-- <b>Admin Panel:</b>
+- **Admin Panel:**
 
   - As a developer, you'll be able to leverage Django’s built-in Admin Interface to easily manage content such as ice cream reviews, user comments, and form submissions.
   - Admin users can view, approve, or delete as needed to maintain site integrity.
@@ -116,7 +116,7 @@ __Existing features:__
 
 __Future Features__
 
-- <b>Review Posts:</b>
+- **Review Posts:**
 
   - Existing Reviews:
     - Upon login, users can upvote and downvote exisitng reviews added by approved contributors.
@@ -135,7 +135,7 @@ User stories were used to keep track of the MOSCOW framework and project MVP as 
 ![User stories](static/images/user-stories.webp)
 
 | USER STORY | DETAILS | ACCEPTANCE CRITERIA |
-|:---:|:---:|:---:|
+|---|---|---|
 | Open a review | As a Site User, I can click on a review so that I can read the full text | (1) When a review title is clicked on, a detailed view of the review is seen. |
 | View paginated list of reviews | As a Site User, I can view a paginated list of reviews so that I can select which review I want to view. | (1) Given more than one review in the database, these multiple reviews are listed. (2) When a user opens the main page a list of reviews is seen. (3) Then the user sees all review titles with pagination to choose what to read. |
 | Create draft reviews | As a Site Admin I can create draft reviews so that I can finish writing the content later | (1) Given a logged in user, they can save a draft review. (2) Then they can finish the content at a later time. |
@@ -165,31 +165,31 @@ New user stories have been added as the project progressed and based on user fee
 
 A MOSCOW framework has been utilised. 
 
-Mo: Full review details, CRUD functionality.(Leave reviews, edit reviews, delete reviews) \
-S: Ratings that are shown on all pages and averaged.  \
-C: Code and style revisement. Future features such as Carousel view, ratings convered to star ratings. \
-oW: Ability to add own reviews as a user. 
+**Mo:** Full review details, CRUD functionality.(Leave reviews, edit reviews, delete reviews) \
+**S:** Ratings that are shown on all pages and averaged.  \
+**C:** Code and style revisement. Future features such as Carousel view, ratings convered to star ratings. 
+**oW:** Ability to add own reviews as a user. 
 
 ## Solution Model
 
-- <b>Home Page:</b>
+- **Home Page:**
   - The starting point, with access to various functionalities like browsing reviews, logging in, or account registration.
     - Login: Users can log in to an existing account to leave comments.
     - Register: Users can Sign Up and create a new account to leave comments.
   - Browse Reviews:
     - Users can explore various ice cream reviews, sorted by location or rating.
 
-- <b>Review Post Page:</b>
+- **Review Post Page:**
   - Upon selecting a review, users can view detailed content, such as descriptions, location(if provided), ratings, and images.
   - Post Comment: 
     - Users can engage with the content by leaving comments on individual reviews (after logging in).
     - A part of the login/register process, allowing new users to sign up and access comment form from review post page.
 
-- <b>Meet Us</b> 
+- **Meet Us**
   - Team bio and image to have more information available to user on reviewers.
   - Submit Suggestion: Any visitor to site can send suggestions for ice cream locations to be reviewed.
 
-- <b>Admin Panel:</b>
+- **Admin Panel:**
   - Admins can manage content, view all comments, and moderate them.
     - View Comments: Admins can view user comments on reviews for approval.
     - Edit/Delete Comment: Admins have the ability to moderate and manage comments, ensuring a positive and relevant community experience.
@@ -200,12 +200,12 @@ oW: Ability to add own reviews as a user.
 
 ## UX/UI Wireframing
 
-- <b>Design and Aesthetic:</b>
+- **Design and Aesthetic:**
   - The site uses Bootstrap 5, ensuring responsiveness across devices.
   - A custom CSS file applies additional styling, creating a clean, vibrant look that reflects the fun, indulgent theme of ice cream.
   - The background and typography choices emphasize a fun, welcoming atmosphere.
 
-- <b>Branding and Navigation:</b>
+- **Branding and Navigation:**
   - The website features a playful branding style, combining the fonts "Outfit" and "Lobster" with an ice cream icon in its logo.
   - The navigation bar is straightforward and accessible, featuring links to:
     - Reviews: Likely showcasing detailed evaluations of ice cream spots.
@@ -213,16 +213,16 @@ oW: Ability to add own reviews as a user.
     - Register/Login: Allowing users to create accounts or log in for a more personalized experience.
   - The navbar is responsive, collapsing into a toggler for mobile users.
 
-- <b>Mission and Team Bio:</b>
+- **Mission and Team Bio:**
   - The About section highlights the team’s mission.
   - The bio is accompanied by an image, emphasizing a personal and relatable connection with the audience.
 
-- <b>User Interaction:</b>
+- **User Interaction:**
   - Any visitor can submit suggestions for new ice cream spots through an embedded form. The form includes:
     - Name, Email and Message fields
   - This invites active participation and fosters community engagement.
 
-- <b>Social Media Integration:</b>
+- **Social Media Integration:**
   - The footer encourages users to follow the team’s journey on Instagram and Twitter, using Font Awesome icons for a modern touch.
   - These links make it easy for fans to stay updated and interact with the brand on social platforms.
 
@@ -241,12 +241,12 @@ oW: Ability to add own reviews as a user.
 
 __Application Structure__
 
-- <b>Frontend:</b>
+- **Frontend:**
   - HTML5/CSS3: Provides structure and styling for reviews and user interactions.
   - Bootstrap: Responsive design for easy navigation on various screen sizes.
   - JavaScript: Enhances interactivity (dynamically toggling comments visibility).
 
-- <b>Backend:</b>
+- **Backend:**
   - Django Framework (Python): Handles routing, user authentication etc.
 
 ### Libraries & Frameworks
@@ -319,6 +319,88 @@ __Application Structure__
 - No unfixed bugs, app running with no errors.
 
 ![Final Result Success](assets/images/heroku-app.webp)
+
+
+## Django Project Setup
+
+1. Install Django and supporting libraries: 
+   
+- ```pip3 install 'django<4' gunicorn```
+- ```pip3 install dj_database_url psycopg2```
+- ```pip3 install dj3-cloudinary-storage```  
+  
+2. Once you have installed any relevant dependencies or libraries, such as the ones listed above, it is important to create a **requirements.txt** file and add all installed libraries to it with the ```pip3 freeze --local > requirements.txt``` command in the terminal.  
+3. Create a new Django project in the terminal ```django-admin startproject thescoop .```
+4. Create a new app eg. ```python3 mangage.py startapp booking```
+5. Add this to list of **INSTALLED_APPS** in **settings.py** - 'reviews',
+6. Create a superuser for the project to allow Admin access and enter credentials: ```python3 manage.py createsuperuser```
+7. Migrate the changes with commands: ```python3 manage.py migrate```
+8. An **env.py** file must be created to store all protected data such as the **DATABASE_URL** and **SECRET_KEY**. These may be called upon in your project's **settings.py** file along with your Database configurations. The **env.py** file must be added to your **gitignore** file so that your important, protected information is not pushed to public viewing on GitHub. For adding to **env.py**:
+
+- ```import os```
+- ```os.environ["DATABASE_URL"]="<copiedURLfromPostgresSQL>"```
+- ```os.environ["SECRET_KEY"]="my_super^secret@key"```
+  
+For adding to **settings.py**:
+
+- ```import os```
+- ```import dj_database_url```
+- ```if os.path.exists("env.py"):```
+- ```import env```
+- ```SECRET_KEY = os.environ.get('SECRET_KEY')``` (actual key hidden within env.py)  
+
+9. Replace **DATABASES** with:
+
+```
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+  }
+```
+
+10. Set up the templates directory in **settings.py**:
+- Under ``BASE_DIR`` enter ``TEMPLATES_DIR = os.path.join(BASE_DIR, ‘templates’)``
+- Update ``TEMPLATES = 'DIRS': [TEMPLATES_DIR]`` with:
+
+```
+os.path.join(BASE_DIR, 'templates'),
+os.path.join(BASE_DIR, 'templates', 'allauth')
+```
+
+- Create the media, static and templates directories in top level of project file in IDE workspace.
+
+11. A **Procfile** must be created within the project repo for Heroku deployment with the following placed within it: ```web: gunicorn thescoop.wsgi```
+12. Make the necessary migrations again.
+
+## Cloudinary API 
+
+Cloudinary provides a cloud hosting solution for media storage. All users uploaded images in the FreeFid project are hosted here.
+
+Set up a new account at [Cloudinary](https://cloudinary.com/) and add your Cloudinary API environment variable to your **env.py** and Heroku Config Vars.
+In your project workspace: 
+
+- Add Cloudinary libraries to INSTALLED_APPS in settings.py 
+- In the order: 
+```
+   'cloudinary_storage',  
+   'django.contrib.staticfiles',  
+   'cloudinary',
+```
+- Add to **env.py** and link up with **settings.py**: ```os.environ["CLOUDINARY_URL"]="cloudinary://...."``` 
+- Set Cloudinary as storage for media and static files in settings.py:
+- ```STATIC_URL = '/static/'```
+```
+  STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'  
+  STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]  
+  STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')‌  
+  MEDIA_URL = '/media/'  
+  DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+```
+
+## Postgres SQL
+
+A new database instance can be created on [Postgres SQL](https://www.postgresql.org/) for your project. 
+
+- From your user dashboard, retrieve the important 'postgres://....' value. Place the value within your **DATABASE_URL**  in your **env.py** file and follow the below instructions to place it in your Heroku Config Vars.
 
 
 ## Deployment
@@ -395,10 +477,6 @@ __Application Structure__
 ## Credits 
 
 - Stock Images (licenced):
-  - 
-  - 
-  - 
-
 - My mentor for the support and knowledge shared.
 - Slack channel peers for their feedback and support with errors.
 - Tutor Assist for the support when debugging became overwhelming
