@@ -44,6 +44,14 @@ hr {
     border-radius: 5px;
 }
 
+.icon-logo {
+    box-shadow: none;
+    border: none;
+    height: 45px;
+    width: auto;
+    margin: 0 2px;
+}
+
 /* Alert Messages Panel */
 .alert {
     background-color: #c3e6cb;

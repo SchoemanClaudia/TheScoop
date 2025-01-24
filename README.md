@@ -4,7 +4,7 @@ xxxxx
 
 Live Link: https://the-scoop-670ac5b1567b.herokuapp.com/
 
-![Screen Mock-up](assets/images/responsive-mockup.webp)
+![Screen Mock-up](static/images/responsive-mockup.webp)
 
 ## Contents
 - [Overview](#overview)
