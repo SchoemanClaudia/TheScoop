@@ -1,10 +1,11 @@
 # The Scoop
 
-xxxxx
+A is a vibrant and community-driven platform that immerses visitors in the sweet world of ice cream, celebrating the very best frozen treats across Ireland. Whether you're a dedicated ice cream aficionado or a curious adventurer, this website is your ultimate destination for discovering hidden gems, iconic parlors, and the most unique, mouth-watering scoops the country has to offer. With a sleek, user-friendly design and intuitive navigation, The Scoop makes it effortless to explore, interact, and share in the fun. Featuring detailed reviews, vibrant imagery, and a rich, engaging aesthetic, it's a one-stop hub for all things ice cream, sparking excitement for those eager to embark on a delicious journey, scoop by scoop.
 
 Live Link: https://the-scoop-670ac5b1567b.herokuapp.com/
 
 ![Screen Mock-up](static/images/responsive-mockup.webp)
+
 
 ## Contents
 - [Overview](#overview)
@@ -18,54 +19,114 @@ Live Link: https://the-scoop-670ac5b1567b.herokuapp.com/
 - [Deployment](#deployment)
 - [Credits](#credits)
 
+
 ## Overview
 
-- xxxxx
+The Scoop provides an easy and engaging way to explore, share, and manage ice cream experiences. With a focus on user interaction, the site offers several CRUD functionalities, allowing visitors to Create, Read, Update, and Delete content as part of a dynamic, community-driven platform. The website is designed with a mobile-first approach, ensuring that it adapts seamlessly across different screen sizes, from desktop to mobile devices. Built using Bootstrap 5 for responsive grids, flexible layouts, and ease of customization.
+
 
 ## Features
 
 __Existing features:__
-- 
+ 
+- <b>Homepage with Ice Cream Reviews:</b>
 
-  ![Home screen](static/images/home.webp)
+  - Main Section:
+    - The homepage serves as the primary destination for new visitors, showcasing ice cream reviews in a clean, organized layout.
 
-- 
-  - 
+    ![Home screen](static/images/home.webp)
 
-  ![Review cards](static/images/review-cards.webp)
+  - Navigation:
+    - A sticky top navigation bar allows users to easily navigate through various sections of the site including Reviews, Meet the Team, and Account-related features such as Registration and Login.
 
-- 
-  - 
-    - 
+    ![Navigation Bar](static/images/nav-bar.webp) | ![Mobile Nav-Toggle](static/images/mobile-nav-bar.webp)
 
-  ![Post detail page](static/images/post-detail.webp)
+  - Review Blurbs:
+    - Each review card provides users with concise, engaging snippets about different ice cream parlors, complete with ratings, descriptions, and images to entice users to read more.
 
-- 
-  - 
-  - 
+    ![Review cards](static/images/review-cards.webp)
 
-  ![Login](static/images/login.webp)  ![Register](static/images/register.webp)
+- <b>User Account System:</b>
 
-- 
-  - 
+  - Sign-Up & Login: 
+    - Users can create an account, log in, and track their favorite reviews, making the experience personalized. The system supports basic user authentication (using Django’s authentication features).
+
+    ![Login](static/images/login.webp)  ![Register](static/images/register.webp)
+
+- <b>Interactive Review Pages:</b>
+
+  - Detailed Reviews: 
+    - Each location review page contains in-depth content, including:
+      - Ratings and personalized comments created by approved admin contributors.
+      - Linked direction with Google Maps integration, to easily find each ice cream parlor’s location.
+      - High-quality images and photos of the featured ice cream parlors and products.
+
+    ![Post Details Page](static/images/post-page.webp)
+
+  - Commenting on Review Posts: 
+    - Upon login, users can view and contribute by posting comments on each review page, fostering community interaction. 
+      - Comments are displayed with the user’s name and timestamp.
+    - Comments are always submitted for approval by an admin, making sure all members adhere to basic community guidelines.
+
+    ![Comments Panel](statics/images/comments-panel.webp) 
+
+- <b>Comments System (CRUD):</b>
+
+  - Users can submit, view, and edit their comments. 
+    - These comments contribute to building a community-driven platform where opinions and suggestions about ice cream spots are shared.
   
-  ![Comment](statics/images/comment.webp)  ![Edit](static/images/edit.webp) | ![Delete](static/images/delete.webp)
+  - A CRUD functionality allows users to leave comments, which entails:
+    - <b>Create</b> a new comment on a review page (upon login).
+    - <b>Read</b> all existing comments, allowing users to engage with past opinions.
+    - <b>Update</b> their own comments if they wish to modify them.
+    - <b>Delete</b> their comments if needed.
 
-- 
-  - 
-    - 
+    ![Comment](statics/images/comment.webp) | ![Edit](static/images/edit.webp) | ![Delete](static/images/delete.webp)
+
+- <b>Contact and Suggestion Form:</b>
+
+  - User Engagement:
+    - A contact form allows users to submit suggestions for new ice cream spots they’d like to see reviewed. 
+    - This form gathers user information via fields ie. name, email, and message.
+
+  - CSRF Protection: 
+    - Forms are protected using Django’s CSRF (Cross-Site Request Forgery) token to ensure security.
+
+  - Backend Integration: 
+    - The form submissions are stored in the backend for review by the website administrators.
 
   ![Contact form](static/images/contact-form.webp)
 
-- 
-  - 
+- <b>Social Media Integration:</b>
 
-  ![Admin page](static/images/admin-page.webp) ![Admin panel](static/images/admin-panel.webp)
+  - The website provides quick access to the brand’s social media profiles (Instagram and Twitter). 
+    - Allowing users to follow along on their ice cream journey and stay updated on new reviews and content.
+
+  - Social media icons are placed prominently in the footer to maintain easy access.
+
+   ![Footer](static/images/Footer.webp)
+
+- <b>Admin Panel:</b>
+
+  - As a developer, you'll be able to leverage Django’s built-in Admin Interface to easily manage content such as ice cream reviews, user comments, and form submissions.
+  - Admin users can view, approve, or delete as needed to maintain site integrity.
+
+  ![Admin login](static/images/admin-login.webp) ![Admin panel](static/images/admin-panel.webp)
+
 
 __Future Features__
-- 
-  - 
-    - 
+
+- <b>Review Posts:</b>
+
+  - Existing Reviews:
+    - Upon login, users can upvote and downvote exisitng reviews added by approved contributors.
+
+  - Personalized Reviews:
+   - Upon login, users can contribute to the website by submitting their own ice cream reviews and adding ratings.
+
+  - Social Gallery
+    - Connecting Instagram post gallery to site, for more visual appeal.
+
 
 ## User Stories
 
@@ -75,6 +136,22 @@ User stories were used to keep track of the MOSCOW framework and project MVP as 
 
 | USER STORY | DETAILS | ACCEPTANCE CRITERIA |
 |:---:|:---:|:---:|
+| Open a review | As a Site User, I can click on a review so that I can read the full text | (1) When a review title is clicked on, a detailed view of the review is seen. |
+| View paginated list of reviews | As a Site User, I can view a paginated list of reviews so that I can select which review I want to view. | (1) Given more than one review in the database, these multiple reviews are listed. (2) When a user opens the main page a list of reviews is seen. (3) Then the user sees all review titles with pagination to choose what to read. |
+| Create draft reviews | As a Site Admin I can create draft reviews so that I can finish writing the content later | (1) Given a logged in user, they can save a draft review. (2) Then they can finish the content at a later time. |
+| Manage reviews | As a Site Admin I can create, read, update and delete reviews so that I can manage my site content | (1) Given a logged in user, they can create a review. (2) Given a logged in user, they can read a review. (3) Given a logged in user, they can update a review. (4) Given a logged in user, they can delete a review. |
+| Read about the reviewers | As a Site User I can click on the Meet Us link so that I can learn more about reviewers | When the Meet Us link is clicked, the about reviewers text is visible |
+| Add and update the about reviewer text | As a Site Admin I can create or update the Meet Us page content so that it is always up to date on the site. | (1) The About app is visible in the admin panel |
+| Account registration | As a Site User I can register an account so that I can comment on a review | (1) Given an email, a user can register an account. (2) Then the user can log in. (3) When the user is logged in they can comment on existing reviews. |
+| View comments | As a Site User / Admin I can view comments on an individual review so that I can read the conversation | (1) Given one or more user comments the admin can view them. (2) Then a site user can click on the comment thread to read the conversation. |
+| Comment on a review | As a Site User I can leave comments on a review so that I can be involved in the conversation | (1) When a user comment is approved. (2) Then a user can reply. (3) Given more than one comment then there is a conversation thread. |
+| Approve comments | As a Site Admin I can approve or disapprove comments so that I can filter out objectionable comments | (1) Given a logged in user, they can approve a comment. (2) Given a logged in user, they can disapprove a comment. |
+| Contact form | As a Potential Collaborator I can fill in a contact form so that I can submit a request for collaboration | (1) Potential Collaborator visiting site can submit request |
+| Store contact form requests | As a Site User I can store collaboration requests in the database so that I can review them | (1) View contact form requests (2) Mark collaboration requests as read. (3) See how many requests to still process |
+| Modify or delete comment on a review | As a Site User I can modify or delete my comment on a review so that I can be involved in the conversation | (1) Given a logged in user, they can modify their comment. (2) Given a logged in user, they can delete their comment. |
+| Add image to review | As a Site Admin I can add an image to review so that each post will give a visual detail| (1) Given a logged in user, they can add an image to a review. |
+| Add directions map to review | As a Site Admin I can add a directions URL so that location of place reviewed is accessible via map | (1) Given a logged in user, they can add a directions URL to a review. |
+
 
 ## Agile
 
