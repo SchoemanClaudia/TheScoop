@@ -1,6 +1,7 @@
 class NoAnimationModal extends bootstrap.Modal {
   _isAnimated() {
-    return false; // Always treat the modal as non-animated
+    // Overides modal as non-animated
+    return false;
   }
 }
 
@@ -45,8 +46,10 @@ for (let button of editButtons) {
 */
 for (let button of deleteButtons) {
   button.addEventListener("click", (e) => {
-    let commentId = e.target.getAttribute("comment_id");
-    deleteConfirm.href = `delete_comment/${commentId}`;
+    const commentId = e.target.getAttribute("comment_id");
+    if (deleteConfirm) {
+      deleteConfirm.href = `/delete_comment/${commentId}`;
+    }
     deleteModal.show();
   });
 }
