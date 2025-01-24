@@ -172,13 +172,59 @@ oW: Ability to add own reviews as a user.
 
 ## Solution Model
 
+- <b>Home Page:</b>
+  - The starting point, with access to various functionalities like browsing reviews, logging in, or account registration.
+    - Login: Users can log in to an existing account to leave comments.
+    - Register: Users can Sign Up and create a new account to leave comments.
+  - Browse Reviews:
+    - Users can explore various ice cream reviews, sorted by location or rating.
+
+- <b>Review Post Page:</b>
+  - Upon selecting a review, users can view detailed content, such as descriptions, location(if provided), ratings, and images.
+  - Post Comment: 
+    - Users can engage with the content by leaving comments on individual reviews (after logging in).
+    - A part of the login/register process, allowing new users to sign up and access comment form from review post page.
+
+- <b>Meet Us</b> 
+  - Team bio and image to have more information available to user on reviewers.
+  - Submit Suggestion: Any visitor to site can send suggestions for ice cream locations to be reviewed.
+
+- <b>Admin Panel:</b>
+  - Admins can manage content, view all comments, and moderate them.
+    - View Comments: Admins can view user comments on reviews for approval.
+    - Edit/Delete Comment: Admins have the ability to moderate and manage comments, ensuring a positive and relevant community experience.
+
 ### Flowchart
 
 ![Flowchart](static/images/flowchart.webp)
 
 ## UX/UI Wireframing
 
+- <b>Design and Aesthetic:</b>
+  - The site uses Bootstrap 5, ensuring responsiveness across devices.
+  - A custom CSS file applies additional styling, creating a clean, vibrant look that reflects the fun, indulgent theme of ice cream.
+  - The background and typography choices emphasize a fun, welcoming atmosphere.
 
+- <b>Branding and Navigation:</b>
+  - The website features a playful branding style, combining the fonts "Outfit" and "Lobster" with an ice cream icon in its logo.
+  - The navigation bar is straightforward and accessible, featuring links to:
+    - Reviews: Likely showcasing detailed evaluations of ice cream spots.
+    - Meet Us: Introducing the team and their mission.
+    - Register/Login: Allowing users to create accounts or log in for a more personalized experience.
+  - The navbar is responsive, collapsing into a toggler for mobile users.
+
+- <b>Mission and Team Bio:</b>
+  - The About section highlights the team’s mission.
+  - The bio is accompanied by an image, emphasizing a personal and relatable connection with the audience.
+
+- <b>User Interaction:</b>
+  - Any visitor can submit suggestions for new ice cream spots through an embedded form. The form includes:
+    - Name, Email and Message fields
+  - This invites active participation and fosters community engagement.
+
+- <b>Social Media Integration:</b>
+  - The footer encourages users to follow the team’s journey on Instagram and Twitter, using Font Awesome icons for a modern touch.
+  - These links make it easy for fans to stay updated and interact with the brand on social platforms.
 
 ### Wireframe
 
@@ -193,18 +239,33 @@ oW: Ability to add own reviews as a user.
 
 ### Languages
 
-- HTML5
-- CSS3
-- JavaScript
-- Python
-- Django
-- Boostrap
+__Application Structure__
+
+- <b>Frontend:</b>
+  - HTML5/CSS3: Provides structure and styling for reviews and user interactions.
+  - Bootstrap: Responsive design for easy navigation on various screen sizes.
+  - JavaScript: Enhances interactivity (dynamically toggling comments visibility).
+
+- <b>Backend:</b>
+  - Django Framework (Python): Handles routing, user authentication etc.
+
+### Libraries & Frameworks
+
+- Django v4.2.17
+- Django AllAuth v0.57.2
+- Django Crispy Forms v2.0
+- Crispy Bootstrap5 v.7
+- Django Summernote v0.8.2
+- Cloudinary v1.36.0
+- Python v3.13.0
 
 ### Other Sites
 
-- 
+- Responsive Screen Preview
+  - MockUp Generator: https://websitemockupgenerator.com/
 
-- 
+- Images downloaded under licenced user
+  - Adobe Stock: https://stock.adobe.com/
 
 - Flowchart diagram created using Miro app:
   - Miro: https://miro.com/
@@ -212,9 +273,16 @@ oW: Ability to add own reviews as a user.
 - Image assets reduced with online platforms:
   - TinyPNG: https://tinypng.com/
   - XConvert: https://www.xconvert.com/
+  - Reduce Images: https://www.reduceimages.com/
 
 - Assisted problem solving sites:
-  - 
+  - https://forums.knack.com/
+  - https://docs.djangoproject.com/
+  - https://developer.mozilla.org/
+  - https://stackoverflow.com/
+  - https://www.w3schools.com/
+  - https://www.geeksforgeeks.org/
+
 
 ## Testing 
 
@@ -251,6 +319,7 @@ oW: Ability to add own reviews as a user.
 - No unfixed bugs, app running with no errors.
 
 ![Final Result Success](assets/images/heroku-app.webp)
+
 
 ## Deployment
 
@@ -325,6 +394,11 @@ oW: Ability to add own reviews as a user.
 
 ## Credits 
 
-- Slack channel peers for their feedback and support
-- My mentor for the support and knowledge shared, helping to keep this prototype simple and clean
-- Tutor Assist for the support
+- Stock Images (licenced):
+  - 
+  - 
+  - 
+
+- My mentor for the support and knowledge shared.
+- Slack channel peers for their feedback and support with errors.
+- Tutor Assist for the support when debugging became overwhelming
