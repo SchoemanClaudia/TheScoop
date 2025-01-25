@@ -49,28 +49,41 @@ Testing file for The Scoop [README.md](README.md).
 [x] HTML validation all passed:
 
 **Home page**  
-![Home Page HTML Validation](static/documentation/testing/.webp)
+![Home Page HTML Validation](static/documentation/testing/html-home.webp)
 
 **Login Page**  
-![Login Page HTML Validation](static/documentation/testing/.webp)
+![Login Page HTML Validation](static/documentation/testing/html-login.webp)
 
 **Logout Page**  
-![Logout Page HTML Validation](static/documentation/testing/.webp)
-
-**Register Page**  
-![Register Page HTML Validation](static/documentation/testing/.webp)
+![Logout Page HTML Validation](static/documentation/testing/html-logout.webp)
 
 **Review Post Page**  
-![Review Post Page HTML Validation](static/documentation/testing/.webp)
+![Review Post Page HTML Validation](static/documentation/testing/html-review.webp)
 
 **About Page**  
-![About Page HTML Validation](static/documentation/testing/.webp)
+![About Page HTML Validation](static/documentation/testing/html-about.webp)
 
 ### CSS Validation Corrected
 
 [x] CSS validation all passed.
 
-![CSS Validation](static/documentation/testing/.webp)
+**Home page**  
+![CSS Validation](static/documentation/testing/css-home.webp)
+
+**Login Page**  
+![CSS Validation](static/documentation/testing/css-login.webp)
+
+**Signup Page**  
+![CSS Validation](static/documentation/testing/css-signup.webp)
+
+**Logout Page**  
+![CSS Validation](static/documentation/testing/css-logout.webp)
+
+**Review Post Page**  
+![CSS Validation](static/documentation/testing/css-review.webp)
+
+**About Page**  
+![CSS Validation](static/documentation/testing/css-about.webp)
 
 ### JSHint
 
@@ -127,11 +140,11 @@ Accessibility was included in every planning stage for The Scoop, through the us
 
 - A minor contrast issue with logo brand on header, pagination buttons and ratings rendered too light for the feature theme and were adjusted accordingly while still keeping to original colour scheme.
 
-  ![Errors encountered](static/documentation/testing/errors.webp)
+    ![Errors encountered](static/documentation/testing/errors.webp)
 
 - After adjusting styles hex colours via [Webaim Contrats Checker](https://webaim.org/resources/contrastchecker/), all errors were resolved successfully.
 
-![No errors](static/documentation/testing/clear.webp)
+    ![No errors](static/documentation/testing/clear.webp)  ![Contrast Checker](static/documentation/testing/contrast.webp)
 
 ## Manual Testing
 
@@ -183,14 +196,20 @@ Most of these encountered were learning curves.
 | 14. | If no directions URL linked to a map, prompts page not found error | YES | Fix error with a conditional statement for `review.directions` and add non breaking space `&nbsp;` as a placeholder when no URL is provided. Directions text link only renders when URL is provided, avoiding page error | [Geeks for Geeks](https://www.geeksforgeeks.org/how-to-add-a-non-breaking-space-using-nbsp-in-html/) | 6beab79 |
 | 15. | Uncaught error when inspecting deployed page `_isAnimated() { return this._element.classList.contains(CLASS_NAME_FADE) }` | YES | Needed to override default behaviour and modified modal as NoAnimationModal | [Get Bootstrap](https://getbootstrap.com/docs/4.3/components/modal/#remove-animation) | 57155b5 |
 | 16. | Error when inspecting delete modal on deployed page `Uncaught TypeError: Cannot set properties of null (setting 'href') at HTMLAnchorElement.<anonymous>` | YES | Corrected event listener, to make sure element exists | Innitial incorrect input | c879c6e |
+| 17. | Last minute error with re-check of signup page in html validator | NO | Bug was created within django-alluth auto generated code | Tutor Support for picking up that bug was made in v0.56 and above, upon completetion The Scoop site is using v0.57 | Commit no. |
 
 
 ### Unfixed Bugs
 
-- No unfixed bugs, app running with no errors.
-    - Only warning encountered when refreshing page in Chrome every now and then, disappears in some instances: 
-        - `Chrome is moving towards a new experience that allows users to choose to browse without third-party cookies.`
-        - Could be linked to Cloudinary database with storing images, will be looking further into this on next update.
-        - Article about the warning: https://forums.knack.com/t/reading-cookie-in-cross-site-context-will-be-blocked-in-future-chrome-versions/17689
+- One unfixed bug, app running with no further errors.
+    - Django-alluth package will need to be downgraded to v0.54, but that would require some adjustment of settings.py file and in some cases downloading templates again. 
+    - This will be corrected in next version with updates made.
 
-![Final Result Success](static/documentation/testing/.webp)
+    ![Django-Allauth Bug](static/documentation/testing/bug.webp)
+
+- A warning encountered when refreshing page in Chrome every now and then, disappears in some instances: 
+    - `Chrome is moving towards a new experience that allows users to choose to browse without third-party cookies.`
+    - Could be linked to Cloudinary database with storing images, will be looking further into this on next update.
+    - Article about the warning: https://forums.knack.com/t/reading-cookie-in-cross-site-context-will-be-blocked-in-future-chrome-versions/17689
+
+    ![Chrome warning](static/documentation/testing/warning.webp)

@@ -138,10 +138,6 @@ User stories were used to keep track of the MOSCOW framework and project MVP as 
 | **View vote totals** | As a Site User / Admin I can view votes on an individual review so that I can see what users think of review | (1) Given one or more user votes the totals are visible below review post. |
 
 
-## Site Testing 
-Please see [TESTING.md](TESTING.md) document.
-
-
 ## Agile
 
 For the Agile process utilised within Github project board and user stories. Detailing the production process and highlighting issues when they arose. 
@@ -158,6 +154,11 @@ A MOSCOW framework has been utilised.
 **S:** Ratings that are shown on all pages and averaged.  \
 **C:** Code and style revisement. Future features such as Carousel view, ratings convered to star ratings. 
 **oW:** Ability to add own reviews as a user. 
+
+
+## Site Testing 
+
+Please see [TESTING.md](TESTING.md) document.
 
 
 ## UX/UI Wireframing
