@@ -27,7 +27,10 @@ class CollaborateRequestModelTest(TestCase):
         )
 
     def test_collaborate_request_str_method(self):
-        self.assertEqual(str(self.collaborate_request), "Collaboration request from Jane Smith")
+        self.assertEqual(
+            str(self.collaborate_request),
+            "Collaboration request from Jane Smith"
+        )
 
 
 class CollaborateFormTest(TestCase):
@@ -77,7 +80,10 @@ class MeetUsViewTest(TestCase):
         self.assertEqual(response.status_code, 200)
         messages = [msg.message for msg in get_messages(response.wsgi_request)]
         self.assertIn("Your message was sent successfully.", messages)
-        self.assertTrue(CollaborateRequest.objects.filter(email="jane@example.com").exists())
+        self.assertTrue(
+            CollaborateRequest.objects.filter(
+                email="jane@example.com").exists()
+        )
 
     def test_meet_us_post_request_invalid_form(self):
         post_data = {

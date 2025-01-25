@@ -3,15 +3,19 @@ from django.urls import reverse
 from .models import About
 from .forms import CollaborateForm
 
-# Create your tests here.
+
 class TestAboutView(TestCase):
+    """
+    Tests for the About view
+    """
 
     def setUp(self):
         """
         Creates about me content
         """
         self.about_content = About(
-            name="About Me", bio="This is about me.")
+            name="About Me", bio="This is about me."
+        )
         self.about_content.save()
 
     def test_render_about_page_with_collaborate_form(self):
@@ -22,16 +26,20 @@ class TestAboutView(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'About Me', response.content)
         self.assertIsInstance(
-            response.context['collaborate_form'], CollaborateForm)
+            response.context['collaborate_form'], CollaborateForm
+        )
 
     def test_successful_collaboration_request_submission(self):
-        """Test for a user requesting a collaboration"""
+        """
+        Test for a user requesting a collaboration
+        """
         form_data = {
-        "name": "Test User",
-        "email": "test@example.com",
-        "message": "This is a test message.",
+            "name": "Test User",
+            "email": "test@example.com",
+            "message": "This is a test message.",
         }
         response = self.client.post(reverse('about'), form_data)
         self.assertEqual(response.status_code, 200)
         self.assertIn(
-            b'Your message was sent successfully.', response.content)
+            b'Your message was sent successfully.', response.content
+        )

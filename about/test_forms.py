@@ -1,7 +1,4 @@
 from django.test import TestCase
-
-# Create your tests here.
-from django.test import TestCase
 from .forms import CollaborateForm
 
 
@@ -14,7 +11,10 @@ class TestCollaborateForm(TestCase):
             'email': 'test@test.com',
             'message': 'Hello!'
         })
-        self.assertTrue(form.is_valid(), msg="Form is not valid")
+        self.assertTrue(
+            form.is_valid(),
+            msg="Form is not valid"
+        )
 
     def test_name_is_required(self):
         """Test for the 'name' field"""

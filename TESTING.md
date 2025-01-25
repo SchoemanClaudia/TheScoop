@@ -95,16 +95,20 @@ Testing file for The Scoop [README.md](README.md).
 
 [x] Python tests all passed.
 
-| Feature | admin.py | forms.py | models.py | urls.py | views.py |
-|---------|----------|----------|-----------|---------|----------|
-| TheScoop main app | na | na | na | [no errors](documentation/testing/thescoop-urls.png) | na |
-| Reviews | [no errors](static/documentation/testing/reviews-admin.webp) | [no errors](static/documentation/testing/review-forms.webp) | [no errors](static/documentation/testing/review-models.webp) | [no errors](static/documentation/testing/review-urls.webp) | [no errors](static/documentation/testing//review-views.webp) |
-| About  | [no errors](static/documentation/testing/about-admin.webp) | [no errors](static/documentation/testing/about-forms.webp) | [no errors](static/documentation/testing/about-models.webp) | [no errors](static/documentation/testing/about-urls.webp) | [no errors](static/documentation/testing/about-views.webp) |
+    All Python files containing the project's code have been tested. 
+    All the errors were fixed, and after running the CI Python Linter, it shows there are no errors.
 
-All Python files containing the project's code have been tested. All the errors were fixed, and after running the CI Python Linter, it shows there are no errors.
-NOTE: `settings.py` Stock Django code gives E501 error, left unchanged to keep app from breaking.
+| Feature | admin.py | forms.py | models.py | urls.py | views.py | test_views.py | test_forms.py | tests.py |
+|---------|:--------:|:--------:|:---------:|:-------:|:--------:|:-------------:|:-------------:|:--------:|
+| TheScoop main app | na | na | na | [no errors](static/documentation/testing/main-urls.webp) | na | na | na | na |
+| Reviews | [no errors](static/documentation/testing/reviews-admin.webp) | [no errors](static/documentation/testing/reviews-forms.webp) | [no errors](static/documentation/testing/reviews-models.webp) | [no errors](static/documentation/testing/reviews-urls.webp) | [no errors](static/documentation/testing/reviews-views.webp) | [no errors](static/documentation/testing/reviews-test-views.webp) | [no errors](static/documentation/testing/reviews-test-forms.webp) | [no errors](static/documentation/testing/reviews-tests.webp) |
+| About  | [no errors](static/documentation/testing/about-admin.webp) | [no errors](static/documentation/testing/about-forms.webp) | [no errors](static/documentation/testing/about-models.webp) | [no errors](static/documentation/testing/about-urls.webp) | [no errors](static/documentation/testing/about-views.webp) | [no errors](static/documentation/testing/about-test-views.webp) | [no errors](static/documentation/testing/about-test-forms.webp) | [no errors](static/documentation/testing/about-tests.webp) |
 
-![Python Test Settings](static/documentation/testing/.webp)
+![Python Tests Clear](static/documentation/testing/py-clear.webp)
+
+    NOTE: `settings.py` Stock Django code gives E501 error, left unchanged to keep app from breaking.
+
+![Python Test Settings](static/documentation/testing/settings.webp)
 
 ## Lighthouse Test
 
@@ -120,7 +124,7 @@ NOTE: `settings.py` Stock Django code gives E501 error, left unchanged to keep a
     ![Lighthouse Report About](static/documentation/testing/lh-about.webp)
 
     **Register Page**  
-    ![Lighthouse Report Register](static/documentation/testing/lh-register.webp)
+    ![Lighthouse Report Register](static/documentation/testing/lh-signup.webp)
 
     **Login Page**  
     ![Lighthouse Report Login](static/documentation/testing/lh-login.webp)
@@ -194,9 +198,10 @@ Most of these encountered were learning curves.
 | 12. | Cloudinary stored images not previewing | YES | Fix reviews `featured_image` template tag, if DTL loop corrected to `{% if "placeholder" in review.featured_image.url %}` and conditional statement working correctly to render variable image vs default | Innitial incorrect input | baee04d |
 | 13. | Error 500 after deploy on `post_detail` page views | YES | Removed upvotes downvotes feature from reviews model and views | Initially wanted to return to this, but feature will be added on next update | 75d5e98 |
 | 14. | If no directions URL linked to a map, prompts page not found error | YES | Fix error with a conditional statement for `review.directions` and add non breaking space `&nbsp;` as a placeholder when no URL is provided. Directions text link only renders when URL is provided, avoiding page error | [Geeks for Geeks](https://www.geeksforgeeks.org/how-to-add-a-non-breaking-space-using-nbsp-in-html/) | 6beab79 |
-| 15. | Uncaught error when inspecting deployed page `_isAnimated() { return this._element.classList.contains(CLASS_NAME_FADE) }` | YES | Needed to override default behaviour and modified modal as NoAnimationModal | [Get Bootstrap](https://getbootstrap.com/docs/4.3/components/modal/#remove-animation) | 57155b5 |
-| 16. | Error when inspecting delete modal on deployed page `Uncaught TypeError: Cannot set properties of null (setting 'href') at HTMLAnchorElement.<anonymous>` | YES | Corrected event listener, to make sure element exists | Innitial incorrect input | c879c6e |
-| 17. | Last minute error with re-check of signup page in html validator | NO | Bug was created within django-alluth auto generated code | Tutor Support for picking up that bug was made in v0.56 and above, upon completetion The Scoop site is using v0.57 | 2316f28 |
+| 15. | Mixed content warning when inspecting deployed page `The page at '<URL>' was loaded over HTTPS, but requested an insecure element '<URL>'. This request was automatically upgraded to HTTPS.` | YES | Added a meta tag to base template '<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">', declaring a content security policy, to help control the sources of content loaded on the page. | [MND Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) | 978d547 |
+| 16. | Uncaught error when inspecting deployed page `_isAnimated() { return this._element.classList.contains(CLASS_NAME_FADE) }` | YES | Needed to override default behaviour and modified modal as NoAnimationModal | [Get Bootstrap](https://getbootstrap.com/docs/4.3/components/modal/#remove-animation) | 57155b5 |
+| 17. | Error when inspecting delete modal on deployed page `Uncaught TypeError: Cannot set properties of null (setting 'href') at HTMLAnchorElement.<anonymous>` | YES | Corrected event listener, to make sure element exists | Innitial incorrect input | c879c6e |
+| 18. | Last minute error with re-check of signup page in html validator `End tag <p> implied, but there were open elements. Unclosed element <span>` | NO | Bug was created within django-alluth v0.56 and above, as auto generated code. This will be corrected in next version with updates made. | Tutor Support for picking up that bug was made in v0.56 and above, and upon completetion, The Scoop site is using v0.57 | 2316f28 |
 
 
 ### Unfixed Bugs
@@ -212,4 +217,4 @@ Most of these encountered were learning curves.
     - This could be due to Cloudinary sending cookies when pulling images, and will be looking further into this on next update.
     - Article about the warning: https://forums.knack.com/t/reading-cookie-in-cross-site-context-will-be-blocked-in-future-chrome-versions/17689
 
-    ![Chrome warning](static/documentation/testing/warning.webp)
+        ![Chrome warning](static/documentation/testing/warning.webp)
