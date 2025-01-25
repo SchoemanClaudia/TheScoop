@@ -111,9 +111,29 @@ __Future Features__
     - Connecting Instagram post gallery to site, for more visual appeal.
 
 
+## Agile
+
+For the Agile process utilised within Github project board and user stories. Detailing the production process and highlighting issues when they arose. 
+
+### Project Issues
+
+![Issues](static/documentation/readme/issues.webp)
+
+New user stories have been added as the project progressed and based on user feedback during the final testing phase. 
+
+A MOSCOW framework has been utilised. 
+
+**Mo:** Full review details, CRUD functionality.(Leave reviews, edit reviews, delete reviews) \
+**S:** Ratings that are shown on all pages and averaged.  \
+**C:** Code and style revisement. Future features such as Carousel view, ratings convered to star ratings. 
+**oW:** Ability to add own reviews as a user. 
+
+
 ## User Stories
 
 User stories were used to keep track of the MOSCOW framework and project MVP as working through the project. 
+
+![Agile](static/documentation/readme/agile.webp)
 
 ![User stories](static/documentation/readme/user-stories.webp)
 
@@ -136,24 +156,6 @@ User stories were used to keep track of the MOSCOW framework and project MVP as 
 | **Add directions map to review** | As a Site Admin I can add a directions URL so that location of place reviewed is accessible via map | (1) Given a logged in user, they can add a directions URL to a review. |
 | **Vote on a review** | As a Site User I can leave an upvote or downvote on a review so that I can give my opinion on the review | (1) When a user likes the review they click upvote icon. (2) When a user doesn't agree with review they click downvote icon |
 | **View vote totals** | As a Site User / Admin I can view votes on an individual review so that I can see what users think of review | (1) Given one or more user votes the totals are visible below review post. |
-
-
-## Agile
-
-For the Agile process utilised within Github project board and user stories. Detailing the production process and highlighting issues when they arose. 
-
-### Project Issues
-
-![Agile](static/documentation/readme/agile.webp)
-
-New user stories have been added as the project progressed and based on user feedback during the final testing phase. 
-
-A MOSCOW framework has been utilised. 
-
-**Mo:** Full review details, CRUD functionality.(Leave reviews, edit reviews, delete reviews) \
-**S:** Ratings that are shown on all pages and averaged.  \
-**C:** Code and style revisement. Future features such as Carousel view, ratings convered to star ratings. 
-**oW:** Ability to add own reviews as a user. 
 
 
 ## Site Testing 
@@ -188,6 +190,26 @@ Please see [TESTING.md](TESTING.md) document.
 - **Social Media Integration:**
   - The footer encourages users to follow the team’s journey on Instagram and Twitter, using Font Awesome icons for a modern touch.
   - These links make it easy for fans to stay updated and interact with the brand on social platforms.
+
+### User Experience
+
+__User Feedback__
+
+Site was deployed after all styling and error handling was in place. Up to date url was sent to a small group of users to gather feedback on navigation, layout structure and check for issues they might encounter as they work through the site. 
+- This feedback was actioned and added for better user experience.
+
+  - Users were asked to:
+    - [x] Register a new account
+    - [x] Logout and log in again
+    - [x] Create a comment
+    - [x] Edit and delete a new comment
+    - [x] Send a message from contact form
+
+| Feedback | Action | Outcome |
+| -------- | ------ | ------- |
+| Viewing on mobile, no login link available at bottom of comment feed when logged out | Add `login_url` to link logged out user to prompt sign in, see (Commit no. f84d430) | Allowing user to login with one click to leave comment, instead of scrolling to header. |
+| Form description does not action user to leave suggestions for reviews | Modified collaborate contact form heading to prompt user for suggestions vs solely collaboration | Clearer instructions on forms, assists with better engagement on site by potential visitors |
+| Hard to see when success messsage is prompted during user interaction with forms | Modified alert panel to sit below the header, and included a smaller panel within forms itself for mobile views | Adding the smaller alert message panels to forms allows users to see prompt more effectively on smaller screens |
 
 ### Wireframe
 
@@ -257,19 +279,26 @@ __Application Structure__
 
 ### Other Sites
 
+- Testing & Validation
+  - HTML: https://validator.w3.org/nu/
+  - CSS: https://jigsaw.w3.org/css-validator/#validate_by_uri
+  - JavaScript: https://jshint.com/
+  - Python: https://pep8ci.herokuapp.com/
+  - Accessibility: https://wave.webaim.org/
+
 - Responsive Screen Preview
   - MockUp Generator: https://websitemockupgenerator.com/
 
 - Images downloaded under licenced user
   - Adobe Stock: https://stock.adobe.com/
 
-- Turning FontAwesome icon into sized favicons:
+- Turning FontAwesome icon into sized favicons
   - Favicon: https://favicon.io/
 
 - Contrast checker for accessibility:
   - Webaim: https://webaim.org/
     
-- Image assets reduced with online platforms:
+- Image assets reduced with online platforms
   - TinyPNG: https://tinypng.com/
   - Bulk Sizing: https://imageresizer.com/bulk-resize/
   - Reduce Images: https://www.reduceimages.com/
@@ -452,6 +481,6 @@ A new database instance can be created on [Postgres SQL](https://www.postgresql.
   - https://www.scoopgelato.ie/
   - https://www.instagram.com/baskinrobbinsireland/
 
-- My mentor for the support and knowledge shared.
+- My mentor & facilitator for the support and knowledge shared.
 - Slack channel peers for their feedback and support with errors.
 - Tutor Assist for the support when debugging became overwhelming

@@ -1,3 +1,4 @@
+/* global bootstrap */
 class NoAnimationModal extends bootstrap.Modal {
   _isAnimated() {
     // Overides modal as non-animated
@@ -10,7 +11,7 @@ const commentText = document.getElementById("id_body");
 const commentForm = document.getElementById("commentForm");
 const submitButton = document.getElementById("submitButton");
 
-const deleteModal = new NoAnimationModal(document.getElementById("deleteModal"));;
+const deleteModal = new NoAnimationModal(document.getElementById("deleteModal"));
 const deleteButtons = document.getElementsByClassName("btn-delete");
 const deleteConfirm = document.getElementById("deleteConfirm");
 

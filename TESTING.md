@@ -89,7 +89,7 @@ Testing file for The Scoop [README.md](README.md).
 
 [x] JavaScript tests all passed.
 
-![JSHint](static/documentation/testing/.webp)
+![JSHint](static/documentation/testing/jshint.webp)
 
 ### CI Python Linter
 
