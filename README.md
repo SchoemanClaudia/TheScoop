@@ -26,7 +26,7 @@ __Existing features:__
 
 - **User Account System:**
 
-  - **SignUp & Login:** Users can create an account, log in, and track their favorite reviews, making the experience personalized. The system supports basic user authentication (using Django’s authentication features).
+  - **Sign Up & Login:** Users can create an account, log in, and track their favorite reviews, making the experience personalized. The system supports basic user authentication (using Django’s authentication features).
 
   ![Register](static/documentation/readme/register.webp)  ![Login](static/documentation/readme/login.webp)
 
@@ -35,7 +35,7 @@ __Existing features:__
   - Detailed Reviews: 
     - Each location review page contains in-depth content, including:
       - Ratings and personalized comments created by approved admin contributors.
-      - Linked direction with Google Maps integration, to easily find each ice cream parlor’s location.
+      - Linked directions with Google Maps integration, to easily find each ice cream parlor’s location.
       - High-quality images and photos of the featured ice cream parlors and products.
 
   ![Post Details Page](static/documentation/readme/post-page.webp)
@@ -43,7 +43,7 @@ __Existing features:__
   - Commenting on Review Posts: 
     - Upon login, users can view and contribute by posting comments on each review page, fostering community interaction. 
       - Comments are displayed with the user’s name and timestamp.
-    - Comments are always submitted for approval by an admin, making sure all members adhere to basic community guidelines.
+    - Comments are always submitted for approval by an admin, ensuring all members adhere to basic community guidelines.
 
   ![Comments Panel](static/documentation/readme/comments-panel.webp) 
 
@@ -64,7 +64,7 @@ __Existing features:__
 
   - User Engagement:
     - A contact form allows users to submit suggestions for new ice cream spots they’d like to see reviewed. 
-    - This form gathers user information via fields ie. name, email, and message.
+    - This form gathers user information via fields i.e. name, email, and message.
 
   - CSRF Protection: 
     - Forms are protected using Django’s CSRF (Cross-Site Request Forgery) token to ensure security.
@@ -77,7 +77,7 @@ __Existing features:__
 - **Social Media Integration:**
 
   - The website provides quick access to the brand’s social media profiles (Instagram and Twitter). 
-    - Allowing users to follow along on their ice cream journey and stay updated on new reviews and content.
+    - Allows users to follow along on their ice cream journey and stay updated on new reviews and content.
 
   - Social media icons are placed prominently in the footer to maintain easy access.
 
@@ -85,7 +85,7 @@ __Existing features:__
 
 - **Error Pages:**
 
-  - Redirects user to error page template setup for relevant error type, prompts user back to home page with 'Go Back to Home' button
+  - Redirects users to an error page template set up for relevant error type, and prompts users to return to the home page with 'Go Back to Home' button.
 
   ![Error Message Page](static/documentation/readme/error-404.webp)
 
@@ -102,12 +102,16 @@ __Future Features__
 - **Review Posts:**
 
   - Existing Reviews:
-    - Upon login, users can upvote and downvote exisitng reviews added by approved contributors.
+    - Upon login, users can upvote and downvote existing reviews added by approved contributors.
 
   - Personalized Reviews:
    - Upon login, users can contribute to the website by submitting their own ice cream reviews and adding ratings.
+  
+  - Carousel view of reviews
 
-  - Social Gallery
+  - Ratings converted to star ratings
+
+  - Social Gallery:
     - Connecting Instagram post gallery to site, for more visual appeal.
 
 
@@ -125,7 +129,7 @@ A MOSCOW framework has been utilised.
 
 **Mo:** Full review details, CRUD functionality.(Leave reviews, edit reviews, delete reviews) \
 **S:** Ratings that are shown on all pages and averaged.  \
-**C:** Code and style revisement. Future features such as Carousel view, ratings convered to star ratings. 
+**C:** Code and style revisions. Future features such as Carousel view, ratings converted to star ratings. \
 **oW:** Ability to add own reviews as a user. 
 
 
@@ -137,8 +141,8 @@ User stories were used to keep track of the MOSCOW framework and project MVP as 
 
 ![User stories](static/documentation/readme/user-stories.webp)
 
-| USER STORY | DETAILS | ACCEPTANCE CRITERIA |
-|---|---|---|
+| **USER STORY** | **DETAILS** | **ACCEPTANCE CRITERIA** |
+| -------------- | ----------- | ----------------------- |
 | **Open a review** | As a Site User, I can click on a review so that I can read the full text | (1) When a review title is clicked on, a detailed view of the review is seen. |
 | **View paginated list of reviews** | As a Site User, I can view a paginated list of reviews so that I can select which review I want to view. | (1) Given more than one review in the database, these multiple reviews are listed. (2) When a user opens the main page a list of reviews is seen. (3) Then the user sees all review titles with pagination to choose what to read. |
 | **Create draft reviews** | As a Site Admin I can create draft reviews so that I can finish writing the content later | (1) Given a logged in user, they can save a draft review. (2) Then they can finish the content at a later time. |
@@ -173,7 +177,7 @@ Please see [TESTING.md](TESTING.md) document.
 - **Branding and Navigation:**
   - The website features a playful branding style, combining the fonts "Outfit" and "Lobster" with an ice cream icon in its logo.
   - The navigation bar is straightforward and accessible, featuring links to:
-    - Reviews: Likely showcasing detailed evaluations of ice cream spots.
+    - Reviews: Showcasing detailed evaluations of ice cream spots.
     - Meet Us: Introducing the team and their mission.
     - Register/Login: Allowing users to create accounts or log in for a more personalized experience.
   - The navbar is responsive, collapsing into a toggler for mobile users.
@@ -191,26 +195,6 @@ Please see [TESTING.md](TESTING.md) document.
   - The footer encourages users to follow the team’s journey on Instagram and Twitter, using Font Awesome icons for a modern touch.
   - These links make it easy for fans to stay updated and interact with the brand on social platforms.
 
-### User Experience
-
-__User Feedback__
-
-Site was deployed after all styling and error handling was in place. Up to date url was sent to a small group of users to gather feedback on navigation, layout structure and check for issues they might encounter as they work through the site. 
-- This feedback was actioned and added for better user experience.
-
-  - Users were asked to:
-    - [x] Register a new account
-    - [x] Logout and log in again
-    - [x] Create a comment
-    - [x] Edit and delete a new comment
-    - [x] Send a message from contact form
-
-| Feedback | Action | Outcome |
-| -------- | ------ | ------- |
-| Viewing on mobile, no login link available at bottom of comment feed when logged out | Add `login_url` to link logged out user to prompt sign in, see (Commit no. f84d430) | Allowing user to login with one click to leave comment, instead of scrolling to header. |
-| Form description does not action user to leave suggestions for reviews | Modified collaborate contact form heading to prompt user for suggestions vs solely collaboration | Clearer instructions on forms, assists with better engagement on site by potential visitors |
-| Hard to see when success messsage is prompted during user interaction with forms | Modified alert panel to sit below the header, and included a smaller panel within forms itself for mobile views | Adding the smaller alert message panels to forms allows users to see prompt more effectively on smaller screens |
-
 ### Wireframe
 
 ![Wireframe](static/documentation/readme/wireframe.webp)
@@ -218,6 +202,26 @@ Site was deployed after all styling and error handling was in place. Up to date 
 ### UI Colour Palette
 
 ![UI Colour Palette](static/documentation/readme/colours.webp)
+
+### User Experience
+
+__User Feedback__
+
+Site was deployed after all styling and error handling was in place. An up-to-date URL was sent to a small group of users to gather feedback on navigation, layout structure, and potential issues they might encounter as while working through the site. 
+- This feedback was actioned and added for better user experience.
+
+  - Users were asked to:
+    - [x] Register a new account
+    - [x] Log out and log in again
+    - [x] Create a comment
+    - [x] Edit and delete a new comment
+    - [x] Send a message from contact form
+
+| **FEEDBACK** | **ACTION** | **OUTCOME** |
+| ------------ | ---------- | ----------- |
+| Viewing on mobile, no login link available at the bottom of the comment feed when logged out | Add `login_url` to link logged out user to prompt sign in, see (Commit no. f84d430) | Allows users to log in with one click to leave comment, instead of scrolling to header. |
+|Form description does not prompt users to leave suggestions for reviews | Modified collaboration contact form heading to prompt user for suggestions vs solely collaboration | Clearer instructions on forms, enhancing engagement on site by potential visitors |
+| Hard to see when success messages are prompted during user interaction with forms | Modified alert panel to sit below the header, aand included a smaller panel within the forms themselves for mobile views | Adding the smaller alert message panels to forms improves visibility of prompts more effectively on smaller screens |
 
 
 ## Solution Model
@@ -230,7 +234,7 @@ Site was deployed after all styling and error handling was in place. Up to date 
     - Users can explore various ice cream reviews, sorted by location or rating.
 
 - **Review Post Page:**
-  - Upon selecting a review, users can view detailed content, such as descriptions, location(if provided), ratings, and images.
+  - Upon selecting a review, users can view detailed content, such as descriptions, location (if provided), ratings, and images.
   - Post Comment: 
     - Users can engage with the content by leaving comments on individual reviews (after logging in).
     - A part of the login/register process, allowing new users to sign up and access comment form from review post page.
@@ -272,7 +276,7 @@ __Application Structure__
 - Django v4.2.17
 - Django AllAuth v0.57.2
 - Django Crispy Forms v2.0
-- Crispy Bootstrap5 v.7
+- Crispy Bootstrap5 v0.7
 - Django Summernote v0.8.2
 - Cloudinary v1.36.0
 - Python v3.13.0
@@ -289,7 +293,7 @@ __Application Structure__
 - Responsive Screen Preview
   - MockUp Generator: https://websitemockupgenerator.com/
 
-- Images downloaded under licenced user
+- Images downloaded under licensed user
   - Adobe Stock: https://stock.adobe.com/
 
 - Turning FontAwesome icon into sized favicons
@@ -322,7 +326,7 @@ __Application Structure__
   
 2. Once you have installed any relevant dependencies or libraries, such as the ones listed above, it is important to create a **requirements.txt** file and add all installed libraries to it with the ```pip3 freeze --local > requirements.txt``` command in the terminal.  
 3. Create a new Django project in the terminal ```django-admin startproject thescoop .```
-4. Create a new app eg. ```python3 mangage.py startapp booking```
+4. Create a new app eg. ```python3 mangage.py startapp reviews```
 5. Add this to list of **INSTALLED_APPS** in **settings.py** - 'reviews',
 6. Create a superuser for the project to allow Admin access and enter credentials: ```python3 manage.py createsuperuser```
 7. Migrate the changes with commands: ```python3 manage.py migrate```
@@ -364,7 +368,7 @@ os.path.join(BASE_DIR, 'templates', 'allauth')
 
 ## Cloudinary API 
 
-Cloudinary provides a cloud hosting solution for media storage. All users uploaded images in the FreeFid project are hosted here.
+Cloudinary provides a cloud hosting solution for media storage. All users uploaded images in The Scoop project are hosted here.
 
 Set up a new account at [Cloudinary](https://cloudinary.com/) and add your Cloudinary API environment variable to your **env.py** and Heroku Config Vars.
 In your project workspace: 
@@ -404,15 +408,15 @@ A new database instance can be created on [Postgres SQL](https://www.postgresql.
   - Open the IDE of your choice and paste the copied git url into the IDE terminal
   - The project is now created as a local clone
 
-| **Step** | **Code** | 
-|---|---|
-| **In Github** |
+| **STEPS** | **CODE** | 
+| --------- | -------- |
+| **In GitHub** |
 | Create a new Github Repo | Github > new Repository |
-| Open Repo | If your Github is utlising the plugin click 'Open' to launch your preferred IDE |
+| Open Repo | If your Github is utilising the plugin click 'Open' to launch your preferred IDE |
 | **In IDE**|
-| Install Django: | pip3 install Django~=4.2.1 |
-| Create requirements file | pip3 --local > requirements.txt |
-| Create Project (proj_name)| Django-admin startproject proj_name . |
+| Install Django: | pip3 install Django~=4.2.17 |
+| Create requirements file | pip3 freeze --local > requirements.txt |
+| Create Project (scoop_project)| Django-admin startproject scoop_project . |
 | Run Server | python3 manage.py runserver |
 | Add Servers to ALLOWED_HOSTS in settings.py | ALLOWED_HOSTS = ALLOWED_HOSTS = ['.codeinstitute-ide.net', '.herokuapp.com'] |
 | Create App (app_name) | python3 manage.py startapp app_name |
@@ -424,7 +428,7 @@ A new database instance can be created on [Postgres SQL](https://www.postgresql.
 | **In IDE** |
 | Install web server Gunicorn and freeze | pip3 install gunicorn~=20.1 \ pip3 freeze --local>requirements.txt |
 | Create Procfile | create Procfile in root directory |
-| Declare Procfile | Add web : gunicorn proj_name.wsgi in Procfile |
+| Declare Procfile | Add `web : gunicorn scoop_project.wsgi` in Procfile |
 | **In Heroku** |
 | Connect Repository | Navigate to Deploy tab > connect to Github Repo |
 | Check Add ons & Dynos | Inside app resources make sure to use Eco Dynos. Delete PostGres DB Add-ons |
@@ -432,14 +436,14 @@ A new database instance can be created on [Postgres SQL](https://www.postgresql.
 | Create Postgres Database | CI Database Creator - https://dbs.ci-dbs.net/ |
 | **In IDE** |
 | Install Database Packages | pip3 install dj-database-url~=0.5 psycopg / then pip3 freeze --local > requirements.txt |
-| Create env.py file | Root directoy add env.py and add to .gitignore |
+| Create env.py file | Root directory add env.py and add to .gitignore |
 | **In env.py** |
 | import OS | Top line 'import os' |
-| set enviroment variables | os.environ["DATABASE_URL"] = "Paste in PostgreSQL database URL" |
+| set environment variables | os.environ["DATABASE_URL"] = "Paste in PostgreSQL database URL" |
 | Secret Key | os.environ["SECRET_KEY"] = "Make up your own randomSecretKey" |
 | **In Heroku** | 
-| Add Secret Ket to config Vars |  SECRET_KEY, “randomSecretKey” |
-| Add a Config Var called DATABASE_URL | DATABASE_URL, “yourDBUrlgoeshere” |
+| Add Secret Key to Config Vars |  SECRET_KEY, “randomSecretKey” |
+| Add a Config Var called DATABASE_URL | DATABASE_URL, 'yourDBUrlGoesHere' |
 | **In settings.py** |
 | Link to env.py | from pathlib import Path, import os, import dj_database_url, if os.path.isfile("env.py"): import env |
 | Remove secret key | SECRET_KEY = os.environ.get('SECRET_KEY') |
@@ -463,11 +467,11 @@ A new database instance can be created on [Postgres SQL](https://www.postgresql.
   - git push, to push all committed code to the remote repository on Github
   - pip3 install imports, for python library loads
   - add loaded packages to requirements.txt file for Heroku:
-    - run, pip3 freeze > requirements.txt, to terminal
+    - Run `pip3 freeze > requirements.txt` in the terminal
 
 ## Credits 
 
-- Stock Images (licenced):
+- Stock Images (licensed):
   - Main Header: https://stock.adobe.com/ie/images/putting-ice-cream-to-cone-summer-concept/167207995
   - Error Page Header: https://stock.adobe.com/ie/images/a-melted-ice-cream-cone-with-drips-and-stains-accident-cone/1172861928
   - Default Cone Image: Cloudinary Stock Library 
@@ -481,6 +485,9 @@ A new database instance can be created on [Postgres SQL](https://www.postgresql.
   - https://www.scoopgelato.ie/
   - https://www.instagram.com/baskinrobbinsireland/
 
+- Django project setup steps taken from https://github.com/amylour/FreeFido_v2/tree/main
+- Heroku Deployment steps taken from https://github.com/SamuelParkerTech/BeerReviewDjango/tree/main
+
 - My mentor & facilitator for the support and knowledge shared.
 - Slack channel peers for their feedback and support with errors.
-- Tutor Assist for the support when debugging became overwhelming
+- Tutor Assist for the support when debugging became overwhelming.
