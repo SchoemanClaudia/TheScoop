@@ -46,7 +46,7 @@ Testing file for The Scoop [README.md](README.md).
 
 ### HTML Validation Corrected
 
-[x] HTML validation all passed:
+- [x] HTML validation all passed:
 
 **Home page**  
 ![Home Page HTML Validation](static/documentation/testing/html-home.webp)
@@ -65,7 +65,7 @@ Testing file for The Scoop [README.md](README.md).
 
 ### CSS Validation Corrected
 
-[x] CSS validation all passed.
+- [x] CSS validation all passed.
 
 **Home page**  
 ![CSS Validation](static/documentation/testing/css-home.webp)
@@ -87,13 +87,13 @@ Testing file for The Scoop [README.md](README.md).
 
 ### JSHint
 
-[x] JavaScript tests all passed.
+- [x] JavaScript tests all passed.
 
 ![JSHint](static/documentation/testing/jshint.webp)
 
 ### CI Python Linter
 
-[x] Python tests all passed.
+- [x] Python tests all passed.
 
     All Python files containing the project's code have been tested. 
     All the errors were fixed, and after running the CI Python Linter, it shows there are no errors.
@@ -212,7 +212,7 @@ Most of these encountered were learning curves.
 
     ![Django-Allauth Bug](static/documentation/testing/bug.webp)
 
-- A warning encountered when refreshing page in Chrome every now and then, disappears in some instances: 
+- A warning encountered when loading `meet_us.html` page in Chrome every now and then, disappears in some instances with a refresh: 
     - `Chrome is moving towards a new experience that allows users to choose to browse without third-party cookies.`
     - This could be due to Cloudinary sending cookies when pulling images, and will be looking further into this on next update.
     - Article about the warning: https://forums.knack.com/t/reading-cookie-in-cross-site-context-will-be-blocked-in-future-chrome-versions/17689
