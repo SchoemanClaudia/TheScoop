@@ -4,7 +4,7 @@ A is a vibrant and community-driven platform that immerses visitors in the sweet
 
 Live Link: https://the-scoop-670ac5b1567b.herokuapp.com/
 
-![Screen Mock-up](static/images/responsive-mockup.webp)
+![Screen Mock-up](static/documentation/readme/responsive-mockup.webp)
 
 
 ## Overview
@@ -21,24 +21,24 @@ __Existing features:__
   - Main Section:
     - The homepage serves as the primary destination for new visitors, showcasing ice cream reviews in a clean, organized layout.
 
-    ![Home screen](static/images/home.webp)
+    ![Home screen](static/documentation/readme/home.webp)
 
   - Navigation:
     - A sticky top navigation bar allows users to easily navigate through various sections of the site including Reviews, Meet the Team, and Account-related features such as Registration and Login.
 
-    ![Navigation Bar](static/images/nav-bar.webp) | ![Mobile Nav-Toggle](static/images/mobile-nav-bar.webp)
+    ![Navigation Bar](static/documentation/readme/nav-bar.webp) | ![Mobile Nav-Toggle](static/documentation/readme/mobile-nav-bar.webp)
 
   - Review Blurbs:
     - Each review card provides users with concise, engaging snippets about different ice cream parlors, complete with ratings, descriptions, and images to entice users to read more.
 
-    ![Review cards](static/images/review-cards.webp)
+    ![Review cards](static/documentation/readme/review-cards.webp)
 
 - **User Account System:**
 
   - Sign-Up & Login: 
     - Users can create an account, log in, and track their favorite reviews, making the experience personalized. The system supports basic user authentication (using Django’s authentication features).
 
-    ![Login](static/images/login.webp)  ![Register](static/images/register.webp)
+    ![Login](static/documentation/readme/login.webp)  ![Register](static/documentation/readme/register.webp)
 
 - **Interactive Review Pages:**
 
@@ -48,14 +48,14 @@ __Existing features:__
       - Linked direction with Google Maps integration, to easily find each ice cream parlor’s location.
       - High-quality images and photos of the featured ice cream parlors and products.
 
-    ![Post Details Page](static/images/post-page.webp)
+    ![Post Details Page](static/documentation/readme/post-page.webp)
 
   - Commenting on Review Posts: 
     - Upon login, users can view and contribute by posting comments on each review page, fostering community interaction. 
       - Comments are displayed with the user’s name and timestamp.
     - Comments are always submitted for approval by an admin, making sure all members adhere to basic community guidelines.
 
-    ![Comments Panel](statics/images/comments-panel.webp) 
+    ![Comments Panel](static/documentation/readme/comments-panel.webp) 
 
 - **Comments System (CRUD):**
 
@@ -68,7 +68,7 @@ __Existing features:__
     - **Update** their own comments if they wish to modify them.
     - **Delete** their comments if needed.
 
-    ![Comment](statics/images/comment.webp) | ![Edit](static/images/edit.webp) | ![Delete](static/images/delete.webp)
+    ![Comment](static/documentation/readme/comment.webp) | ![Edit](static/documentation/readme/edit.webp) | ![Delete](static/documentation/readme/delete.webp)
 
 - **Contact and Suggestion Form:**
 
@@ -82,7 +82,7 @@ __Existing features:__
   - Backend Integration: 
     - The form submissions are stored in the backend for review by the website administrators.
 
-  ![Contact form](static/images/contact-form.webp)
+  ![Contact form](static/documentation/readme/contact-form.webp)
 
 - **Social Media Integration:**
 
@@ -91,14 +91,14 @@ __Existing features:__
 
   - Social media icons are placed prominently in the footer to maintain easy access.
 
-   ![Footer](static/images/Footer.webp)
+   ![Footer](static/documentation/readme/Footer.webp)
 
 - **Admin Panel:**
 
   - As a developer, you'll be able to leverage Django’s built-in Admin Interface to easily manage content such as ice cream reviews, user comments, and form submissions.
   - Admin users can view, approve, or delete as needed to maintain site integrity.
 
-  ![Admin login](static/images/admin-login.webp) ![Admin panel](static/images/admin-panel.webp)
+  ![Admin login](static/documentation/readme/admin-login.webp) ![Admin panel](static/documentation/readme/admin-panel.webp)
 
 
 __Future Features__
@@ -119,7 +119,7 @@ __Future Features__
 
 User stories were used to keep track of the MOSCOW framework and project MVP as working through the project. 
 
-![User stories](static/images/user-stories.webp)
+![User stories](static/documentation/readme/user-stories.webp)
 
 | USER STORY | DETAILS | ACCEPTANCE CRITERIA |
 |---|---|---|
@@ -148,7 +148,7 @@ For the Agile process I utilised the Github project board and user stories. Deta
 
 ### Project Issues
 
-![Agile](static/images/agile.webp)
+![Agile](static/documentation/readme/agile.webp)
 
 New user stories have been added as the project progressed and based on user feedback during the final testing phase. 
 
@@ -185,7 +185,7 @@ A MOSCOW framework has been utilised.
 
 ### Flowchart
 
-![Flowchart](static/images/flowchart.webp)
+![Flowchart](static/documentation/readme/flowchart.webp)
 
 ## UX/UI Wireframing
 
@@ -217,10 +217,18 @@ A MOSCOW framework has been utilised.
 
 ### Wireframe
 
+![Wireframe](static/documentation/readme/wireframe.webp)
+
 ### ERD Design
+
+![ERD Design](static/documentation/readme/erd.webp)
 
 ### Database Model
 
+![Database Model](static/documentation/readme/model.webp)
+
+## Site Testing 
+Please see [TESTING.md](TESTING.md) document.
 
 ## Technologies Used
 
@@ -257,8 +265,8 @@ __Application Structure__
 - Turning FontAwesome icon into sized favicons:
   - Favicon: https://favicon.io/
 
-- Flowchart diagram created using Miro app:
-  - Miro: https://miro.com/
+- Contrast checker for accessibility:
+  - Webaim: https://webaim.org/
     
 - Image assets reduced with online platforms:
   - TinyPNG: https://tinypng.com/
@@ -430,6 +438,19 @@ A new database instance can be created on [Postgres SQL](https://www.postgresql.
 ## Credits 
 
 - Stock Images (licenced):
+  - Main Header: https://stock.adobe.com/ie/images/putting-ice-cream-to-cone-summer-concept/167207995
+  - Error Page Header: https://stock.adobe.com/ie/images/a-melted-ice-cream-cone-with-drips-and-stains-accident-cone/1172861928
+  - Default Cone Image: Cloudinary Stock Library 
+    - https://asset.cloudinary.com/dcaygv4vw/16aa550b58d759f1cd894bc2993d80a1
+
+- Ice Cream Parlour Info & Images:
+  - https://www.cafollasicecreamandcoffee.ie/ 
+  - https://murphysicecream.ie/
+  - https://www.instagram.com/rainbow_scoops/?hl=en
+  - https://www.instagram.com/dashcafe_/?hl=en
+  - https://www.scoopgelato.ie/
+  - https://www.instagram.com/baskinrobbinsireland/
+
 - My mentor for the support and knowledge shared.
 - Slack channel peers for their feedback and support with errors.
 - Tutor Assist for the support when debugging became overwhelming

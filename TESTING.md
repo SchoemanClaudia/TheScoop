@@ -31,39 +31,52 @@ Testing file for The Scoop [README.md](README.md).
 
 ## Validation
 
-### HTML Validation
+### Validation Errors
+- About page `img` tag not correctly formatted:
+    - Define new class to `styles.css` for best practice
 
-[x] HTML validation all passed.
+- Modify all nav-link DTL tags: 
+    - Adjusted {% endif %} to include aria-current and appear on rendered page
+
+- Fix page referencing
+    - Fix self contained content & conditional statements for best semantic representation
+
+- Summernote auto adds paragraphs:
+    - Modify block level elements, placed within `<p>` + `<span>` tags
+
+### HTML Validation Corrected
+
+[x] HTML validation all passed:
 
 **Home page**  
-![Home Page HTML Validation]()
+![Home Page HTML Validation](static/documentation/testing/.webp)
 
 **Login Page**  
-![Login Page HTML Validation]()
+![Login Page HTML Validation](static/documentation/testing/.webp)
 
 **Logout Page**  
-![Logout Page HTML Validation]()
+![Logout Page HTML Validation](static/documentation/testing/.webp)
 
 **Register Page**  
-![Register Page HTML Validation]()
+![Register Page HTML Validation](static/documentation/testing/.webp)
 
 **Review Post Page**  
-![Review Post Page HTML Validation]()
+![Review Post Page HTML Validation](static/documentation/testing/.webp)
 
 **About Page**  
-![About Page HTML Validation]()
+![About Page HTML Validation](static/documentation/testing/.webp)
 
-### CSS Validation
+### CSS Validation Corrected
 
 [x] CSS validation all passed.
 
-![CSS Validation]()
+![CSS Validation](static/documentation/testing/.webp)
 
 ### JSHint
 
 [x] JavaScript tests all passed.
 
-![JSHint]()
+![JSHint](static/documentation/testing/.webp)
 
 ### CI Python Linter
 
@@ -72,57 +85,57 @@ Testing file for The Scoop [README.md](README.md).
 | Feature | admin.py | forms.py | models.py | urls.py | views.py |
 |---------|----------|----------|-----------|---------|----------|
 | TheScoop main app | na | na | na | [no errors](documentation/testing/thescoop-urls.png) | na |
-| Reviews | [no errors](documentation/testing/reviews-admin.png) | [no errors](documentation/testing/review-forms.png) | [no errors](documentation/testing/review-models.png) | [no errors](documentation/testing/review-urls.png) | [no errors](documentation/testing/review-views.png) |
-| About  | [no errors](documentation/testing/about-admin.png) | [no errors](documentation/testing/about-forms.png) | [no errors](documentation/testing/about-models.png) | [no errors](documentation/testing/about-urls.png) | [no errors](documentation/testing/about-views.png) |
+| Reviews | [no errors](static/documentation/testing/reviews-admin.webp) | [no errors](static/documentation/testing/review-forms.webp) | [no errors](static/documentation/testing/review-models.webp) | [no errors](static/documentation/testing/review-urls.webp) | [no errors](static/documentation/testing//review-views.webp) |
+| About  | [no errors](static/documentation/testing/about-admin.webp) | [no errors](static/documentation/testing/about-forms.webp) | [no errors](static/documentation/testing/about-models.webp) | [no errors](static/documentation/testing/about-urls.webp) | [no errors](static/documentation/testing/about-views.webp) |
 
 All Python files containing the project's code have been tested. All the errors were fixed, and after running the CI Python Linter, it shows there are no errors.
 NOTE: `settings.py` Stock Django code gives E501 error, left unchanged to keep app from breaking.
 
-![Python Test Settings]()
+![Python Test Settings](static/documentation/testing/.webp)
 
 ## Lighthouse Test
 
 - [x] Desktop view:
 
     **Home**  
-    ![Lighthouse Report Home]()
+    ![Lighthouse Report Home](static/documentation/testing/.webp)
 
     **Review post page**  
-    ![Lighthouse Report Review Post Page]()
+    ![Lighthouse Report Review Post Page](static/documentation/testing/.webp)
 
     **About Page**  
-    ![Lighthouse Report About]()
+    ![Lighthouse Report About](static/documentation/testing/.webp)
 
     **Register Page**  
-    ![Lighthouse Report Register]()
+    ![Lighthouse Report Register](static/documentation/testing/.webp)
 
     **Login Page**  
-    ![Lighthouse Report Login]()
+    ![Lighthouse Report Login](static/documentation/testing/.webp)
 
     **Logout Page**  
-    ![Lighthouse Report Logout]()
+    ![Lighthouse Report Logout](static/documentation/testing/.webp)
 
 - [x] Mobile view:
     - Lighthouse testing was carried out in Incognito mode to acheive the best result. Performance was lower than preferred on mobile view due to the site being image heavy. Images used in the sites design were compressed to offer the best chance for a decent performance score. The CDNs used for Bootstrap were also noted in the Lighthouse report as causing issue with performance. This report will be reviewed for future development of The Scoop to raise this score.
 
     **Home**  
-    ![Lighthouse Report Home Mobile]()
+    ![Lighthouse Report Home Mobile](static/documentation/testing/.webp)
 
 ### Accessibility
 
-Accessibility was included in every planning stage for The Scoop, through the use of the WAVE report tool I could ensure that any necessary changes were made to make the website as accessible as it could be. A minor contrast issue with logo brand on header, pagination buttons and ratings rendered too light for the feature theme and were adjusted accordingly while still keeping to original colour scheme.
+Accessibility was included in every planning stage for The Scoop, through the use of the WAVE report tool I could ensure that any necessary changes were made to make the website as accessible as it could be.
 
-- 
+- A minor contrast issue with logo brand on header, pagination buttons and ratings rendered too light for the feature theme and were adjusted accordingly while still keeping to original colour scheme.
 
-  ![Errors encountered](static/images/errors.webp)
+  ![Errors encountered](static/documentation/testing/errors.webp)
 
-- 
+- After adjusting styles hex colours via [Webaim Contrats Checker](https://webaim.org/resources/contrastchecker/), all errors were resolved successfully.
 
-![No errors](static/images/clear.webp)
+![No errors](static/documentation/testing/clear.webp)
 
 ## Manual Testing
 
-### User Input/Form Validation
+### User Input / Form Validation
 
 Testing was carried out on desktop using a Chrome browser to ensure all forms take the intended input and process the input appropriately.
 Manual testeing by checking the following:
@@ -179,4 +192,4 @@ Most of these encountered were learning curves.
         - Could be linked to Cloudinary database with storing images, will be looking further into this on next update.
         - Article about the warning: https://forums.knack.com/t/reading-cookie-in-cross-site-context-will-be-blocked-in-future-chrome-versions/17689
 
-![Final Result Success]()
+![Final Result Success](static/documentation/testing/.webp)
