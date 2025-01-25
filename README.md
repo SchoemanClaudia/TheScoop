@@ -4,7 +4,7 @@ A is a vibrant and community-driven platform that immerses visitors in the sweet
 
 Live Link: https://the-scoop-670ac5b1567b.herokuapp.com/
 
-![Screen Mock-up](static/documentation/readme/responsive-mockup.webp)
+![Screen Mock-up](static/documentation/readme/responsive-mockup.png)
 
 
 ## Overview
@@ -18,27 +18,17 @@ __Existing features:__
  
 - **Homepage with Ice Cream Reviews:**
 
-  - Main Section:
-    - The homepage serves as the primary destination for new visitors, showcasing ice cream reviews in a clean, organized layout.
+  - **Main Section:** The homepage serves as the primary destination for new visitors, showcasing ice cream reviews in a clean, organized layout.
+  - **Navigation:** A sticky top navigation bar allows users to easily navigate through various sections of the site including Reviews, Meet the Team, and Account-related features such as Registration and Login.
+  - **Review Blurbs:** Each review card provides users with concise, engaging snippets about different ice cream parlors, complete with ratings, descriptions, and images to entice users to read more.
 
-    ![Home screen](static/documentation/readme/home.webp)
-
-  - Navigation:
-    - A sticky top navigation bar allows users to easily navigate through various sections of the site including Reviews, Meet the Team, and Account-related features such as Registration and Login.
-
-    ![Navigation Bar](static/documentation/readme/nav-bar.webp) | ![Mobile Nav-Toggle](static/documentation/readme/mobile-nav-bar.webp)
-
-  - Review Blurbs:
-    - Each review card provides users with concise, engaging snippets about different ice cream parlors, complete with ratings, descriptions, and images to entice users to read more.
-
-    ![Review cards](static/documentation/readme/review-cards.webp)
+  ![Home screen](static/documentation/readme/home.webp)   ![Mobile Nav-Bar](static/documentation/readme/mobile-navbar.webp)  ![Mobile Nav-Toggle](static/documentation/readme/mobile-toggle.webp)
 
 - **User Account System:**
 
-  - Sign-Up & Login: 
-    - Users can create an account, log in, and track their favorite reviews, making the experience personalized. The system supports basic user authentication (using Django’s authentication features).
+  - **SignUp & Login:** Users can create an account, log in, and track their favorite reviews, making the experience personalized. The system supports basic user authentication (using Django’s authentication features).
 
-    ![Login](static/documentation/readme/login.webp)  ![Register](static/documentation/readme/register.webp)
+  ![Register](static/documentation/readme/register.webp)  ![Login](static/documentation/readme/login.webp)
 
 - **Interactive Review Pages:**
 
@@ -48,14 +38,14 @@ __Existing features:__
       - Linked direction with Google Maps integration, to easily find each ice cream parlor’s location.
       - High-quality images and photos of the featured ice cream parlors and products.
 
-    ![Post Details Page](static/documentation/readme/post-page.webp)
+  ![Post Details Page](static/documentation/readme/post-page.webp)
 
   - Commenting on Review Posts: 
     - Upon login, users can view and contribute by posting comments on each review page, fostering community interaction. 
       - Comments are displayed with the user’s name and timestamp.
     - Comments are always submitted for approval by an admin, making sure all members adhere to basic community guidelines.
 
-    ![Comments Panel](static/documentation/readme/comments-panel.webp) 
+  ![Comments Panel](static/documentation/readme/comments-panel.webp) 
 
 - **Comments System (CRUD):**
 
@@ -68,7 +58,7 @@ __Existing features:__
     - **Update** their own comments if they wish to modify them.
     - **Delete** their comments if needed.
 
-    ![Comment](static/documentation/readme/comment.webp) | ![Edit](static/documentation/readme/edit.webp) | ![Delete](static/documentation/readme/delete.webp)
+  ![Comment](static/documentation/readme/comment.webp)  ![Edit](static/documentation/readme/edit.webp)  ![Delete](static/documentation/readme/delete.webp)
 
 - **Contact and Suggestion Form:**
 
@@ -91,14 +81,20 @@ __Existing features:__
 
   - Social media icons are placed prominently in the footer to maintain easy access.
 
-   ![Footer](static/documentation/readme/Footer.webp)
+   ![Footer](static/documentation/readme/footer.webp)
+
+- **Error Pages:**
+
+  - Redirects user to error page template setup for relevant error type, prompts user back to home page with 'Go Back to Home' button
+
+  ![Error Message Page](static/documentation/readme/error-404.webp)
 
 - **Admin Panel:**
 
   - As a developer, you'll be able to leverage Django’s built-in Admin Interface to easily manage content such as ice cream reviews, user comments, and form submissions.
   - Admin users can view, approve, or delete as needed to maintain site integrity.
 
-  ![Admin login](static/documentation/readme/admin-login.webp) ![Admin panel](static/documentation/readme/admin-panel.webp)
+  ![Admin](static/documentation/readme/admin.webp) ![Admin Comment Panel](static/documentation/readme/admin-panel.webp)
 
 
 __Future Features__
@@ -142,9 +138,13 @@ User stories were used to keep track of the MOSCOW framework and project MVP as 
 | **View vote totals** | As a Site User / Admin I can view votes on an individual review so that I can see what users think of review | (1) Given one or more user votes the totals are visible below review post. |
 
 
+## Site Testing 
+Please see [TESTING.md](TESTING.md) document.
+
+
 ## Agile
 
-For the Agile process I utilised the Github project board and user stories. Detailing the production process and highlighting issues when they arose. 
+For the Agile process utilised within Github project board and user stories. Detailing the production process and highlighting issues when they arose. 
 
 ### Project Issues
 
@@ -159,33 +159,6 @@ A MOSCOW framework has been utilised.
 **C:** Code and style revisement. Future features such as Carousel view, ratings convered to star ratings. 
 **oW:** Ability to add own reviews as a user. 
 
-## Solution Model
-
-- **Home Page:**
-  - The starting point, with access to various functionalities like browsing reviews, logging in, or account registration.
-    - Login: Users can log in to an existing account to leave comments.
-    - Register: Users can Sign Up and create a new account to leave comments.
-  - Browse Reviews:
-    - Users can explore various ice cream reviews, sorted by location or rating.
-
-- **Review Post Page:**
-  - Upon selecting a review, users can view detailed content, such as descriptions, location(if provided), ratings, and images.
-  - Post Comment: 
-    - Users can engage with the content by leaving comments on individual reviews (after logging in).
-    - A part of the login/register process, allowing new users to sign up and access comment form from review post page.
-
-- **Meet Us**
-  - Team bio and image to have more information available to user on reviewers.
-  - Submit Suggestion: Any visitor to site can send suggestions for ice cream locations to be reviewed.
-
-- **Admin Panel:**
-  - Admins can manage content, view all comments, and moderate them.
-    - View Comments: Admins can view user comments on reviews for approval.
-    - Edit/Delete Comment: Admins have the ability to moderate and manage comments, ensuring a positive and relevant community experience.
-
-### Flowchart
-
-![Flowchart](static/documentation/readme/flowchart.webp)
 
 ## UX/UI Wireframing
 
@@ -219,6 +192,35 @@ A MOSCOW framework has been utilised.
 
 ![Wireframe](static/documentation/readme/wireframe.webp)
 
+### UI Colour Palette
+
+![UI Colour Palette](static/documentation/readme/colours.webp)
+
+
+## Solution Model
+
+- **Home Page:**
+  - The starting point, with access to various functionalities like browsing reviews, logging in, or account registration.
+    - Login: Users can log in to an existing account to leave comments.
+    - Register: Users can Sign Up and create a new account to leave comments.
+  - Browse Reviews:
+    - Users can explore various ice cream reviews, sorted by location or rating.
+
+- **Review Post Page:**
+  - Upon selecting a review, users can view detailed content, such as descriptions, location(if provided), ratings, and images.
+  - Post Comment: 
+    - Users can engage with the content by leaving comments on individual reviews (after logging in).
+    - A part of the login/register process, allowing new users to sign up and access comment form from review post page.
+
+- **Meet Us**
+  - Team bio and image to have more information available to user on reviewers.
+  - Submit Suggestion: Any visitor to site can send suggestions for ice cream locations to be reviewed.
+
+- **Admin Panel:**
+  - Admins can manage content, view all comments, and moderate them.
+    - View Comments: Admins can view user comments on reviews for approval.
+    - Edit/Delete Comment: Admins have the ability to moderate and manage comments, ensuring a positive and relevant community experience.
+
 ### ERD Design
 
 ![ERD Design](static/documentation/readme/erd.webp)
@@ -227,8 +229,6 @@ A MOSCOW framework has been utilised.
 
 ![Database Model](static/documentation/readme/model.webp)
 
-## Site Testing 
-Please see [TESTING.md](TESTING.md) document.
 
 ## Technologies Used
 
@@ -270,7 +270,7 @@ __Application Structure__
     
 - Image assets reduced with online platforms:
   - TinyPNG: https://tinypng.com/
-  - XConvert: https://www.xconvert.com/
+  - Bulk Sizing: https://imageresizer.com/bulk-resize/
   - Reduce Images: https://www.reduceimages.com/
 
 - Assisted problem solving sites:

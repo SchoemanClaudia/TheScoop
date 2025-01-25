@@ -157,6 +157,7 @@ Manual testeing by checking the following:
 | **Contact Form** | PASS | Collaboration contact form available to any site visitor with name, email, message fields & send button. Empty fields deliver prompt to user, email field demands '@' symbols. Message sent prompts success message to confirm action. |
 | **Social Links** | PASS | External link open in a new windows to correct sites |
 | **Logout** | PASS | Redirects to log out confirmation page, and account is logged out message once confirmed. 'You are not logged in' displays in Nav Bar |
+| **Error Page Load** | PASS | Redirects user to error page template setup for relevant error type, prompts user back to home page with 'Go Back to Home' button |
 
 ## Bugs Encountered 
   
