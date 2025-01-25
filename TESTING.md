@@ -1,12 +1,10 @@
 # Testing
 
-Testingfile of The Scoop [README.md](README.md) file.
+Testing file for The Scoop [README.md](README.md).
 
 ## Testing User Stories
 
 ### Developer Stories
-
-**User Story:** As a Developer, create a project structure so that I can develop The Scoop.
 
 - [x] Frontend and Backend of the project created.
 - [x] Database is connected to the project.
@@ -14,30 +12,28 @@ Testingfile of The Scoop [README.md](README.md) file.
 
 ### User Stories
 
-**User Story:** xxxx
-
-- [x] xxx.
-- [x] xxx.
-- [x] xxx.
-
-**User Story:** xxxx
-
-- [x] xxx.
-- [x] xxx.
-- [x] xxx.
-
-**User Story:** xxxx
-
-- [x] xxx.
-- [x] xxx.
-- [x] xxx.
+- [x] Open a review
+- [x] View paginated list of reviews
+- [x] Create draft reviews
+- [x] Manage reviews
+- [x] Read about the reviewers
+- [x] Add and update the about reviewer text
+- [x] Account registration
+- [x] View comments
+- [x] Comment on a review
+- [x] Approve comments
+- [x] Contact form
+- [x] Store contact form requests
+- [x] Modify or delete comment on a review
+- [x] Add image to review
+- [x] Add directions map to review
 
 
 ## Validation
 
 ### HTML Validation
 
-HTML validation all passed.
+[x] HTML validation all passed.
 
 **Home page**  
 ![Home Page HTML Validation]()
@@ -59,118 +55,95 @@ HTML validation all passed.
 
 ### CSS Validation
 
-CSS validation all passed.
+[x] CSS validation all passed.
 
 ![CSS Validation]()
 
 ### JSHint
 
-JavaScript tests all passed.
+[x] JavaScript tests all passed.
 
 ![JSHint]()
 
 ### CI Python Linter
 
-Python tests all passed.
+[x] Python tests all passed.
+
+| Feature | admin.py | forms.py | models.py | urls.py | views.py |
+|---------|----------|----------|-----------|---------|----------|
+| TheScoop main app | na | na | na | [no errors](documentation/testing/thescoop-urls.png) | na |
+| Reviews | [no errors](documentation/testing/reviews-admin.png) | [no errors](documentation/testing/review-forms.png) | [no errors](documentation/testing/review-models.png) | [no errors](documentation/testing/review-urls.png) | [no errors](documentation/testing/review-views.png) |
+| About  | [no errors](documentation/testing/about-admin.png) | [no errors](documentation/testing/about-forms.png) | [no errors](documentation/testing/about-models.png) | [no errors](documentation/testing/about-urls.png) | [no errors](documentation/testing/about-views.png) |
 
 All Python files containing the project's code have been tested. All the errors were fixed, and after running the CI Python Linter, it shows there are no errors.
 NOTE: `settings.py` Stock Django code gives E501 error, left unchanged to keep app from breaking.
 
-![Python Test]()
+![Python Test Settings]()
 
 ## Lighthouse Test
 
-**Home**  
-![Lighthouse Report Home]()
+- [x] Desktop view:
 
-**Review post page**  
-![Lighthouse Report Review Post Page]()
+    **Home**  
+    ![Lighthouse Report Home]()
 
-**About Page**  
-![Lighthouse Report About]()
+    **Review post page**  
+    ![Lighthouse Report Review Post Page]()
 
-**Register Page**  
-![Lighthouse Report Register]()
+    **About Page**  
+    ![Lighthouse Report About]()
 
-**Login Page**  
-![Lighthouse Report Login]()
+    **Register Page**  
+    ![Lighthouse Report Register]()
 
-**Logout Page**  
-![Lighthouse Report Logout]()
+    **Login Page**  
+    ![Lighthouse Report Login]()
 
-## Manual Test
+    **Logout Page**  
+    ![Lighthouse Report Logout]()
 
-### Navigation Modal
+- [x] Mobile view:
+    - Lighthouse testing was carried out in Incognito mode to acheive the best result. Performance was lower than preferred on mobile view due to the site being image heavy. Images used in the sites design were compressed to offer the best chance for a decent performance score. The CDNs used for Bootstrap were also noted in the Lighthouse report as causing issue with performance. This report will be reviewed for future development of The Scoop to raise this score.
 
-**Pass:** Works as expected.  
-![Navigation Modal]()
+    **Home**  
+    ![Lighthouse Report Home Mobile]()
 
-### Header URL pages
+### Accessibility
 
-**Pass:** Works as expected.  
-![Header UR pages]()
+Accessibility was included in every planning stage for The Scoop, through the use of the WAVE report tool I could ensure that any necessary changes were made to make the website as accessible as it could be. A minor contrast issue with logo brand on header, pagination buttons and ratings rendered too light for the feature theme and were adjusted accordingly while still keeping to original colour scheme.
 
-### Latest Reviews Pagination
+- 
 
-**Pass:** Works as expected.  
-![Latest Reviews Pagination]()
+  ![Errors encountered](static/images/errors.webp)
 
-### Review Card onclick
+- 
 
-**Pass:** Works as expected.  
-![Review Card]()
+![No errors](static/images/clear.webp)
 
-### Directions Map URL
+## Manual Testing
 
-**Pass:** Works as expected.  
-![Directions Map URL]()
+### User Input/Form Validation
 
-### Submit Comment
+Testing was carried out on desktop using a Chrome browser to ensure all forms take the intended input and process the input appropriately.
+Manual testeing by checking the following:
 
-**Pass:** Works as expected.  
-![Submit comment]()
+| TEST INPUT | CORRECT OUTCOME | MEET REQUIREMENTS |
+|:---:|:---:|:---:|
+| xxx | PASS |
+| 
 
-### Edit Comment
 
-**Pass:** Works as expected.  
-![Edit Comment](docs/test-gif/edit.gif)
+## Bugs Encountered 
+  
+The below are bugs that I spent more time investigating or required the assistance of Tutor Support.
+Most of these encountered were learning curves. 
 
-### Delete Comment
+| No. | Bug | Solved | Fix | Solution Credit | Commit no. |
+| --- | --- | ------ | --- | --------------- | -----------|
+| No. | Bug | Solved | Fix | Solution Credit | Commit no. |
 
-**Pass:** Works as expected.  
-![Delete Confirmation Comment]()
+### Unfixed Bugs
 
-### Delete Modal
+- No unfixed bugs, app running with no errors.
 
-**Pass:** Works as expected.  
-![Delete Confirmation Modal]()
-
-### Success Alert Messages
-
-**Pass:** Works as expected.  
-![Success Alert Messages]()
-
-### Collaborate Form
-
-**Pass:** Works as expected.  
-![Collaborate Form]()
-
-### Login Logout
-
-**Pass:** Works as expected.  
-![Login Logout]()
-
-### Register
-
-**Pass:** Works as expected.  
-![Register]()
-
-### Social Media Icons
-
-**Pass:** Works as expected.  
-![Social Media Icons]()
-
-### Error Messages
-
-**Pass:** Works as expected.  
-![Error Messages]()
+![Final Result Success]()

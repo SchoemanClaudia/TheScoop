@@ -7,19 +7,6 @@ Live Link: https://the-scoop-670ac5b1567b.herokuapp.com/
 ![Screen Mock-up](static/images/responsive-mockup.webp)
 
 
-## Contents
-- [Overview](#overview)
-- [Features](#features)
-- [User Stories](#user-stories)
-- [Agile](#agile)
-- [Solution Model](#solution-model)
-- [UX/UI Wireframing](#ux-ui-wireframing)
-- [Technologies Used](#technologies-used)
-- [Testing](#testing)
-- [Deployment](#deployment)
-- [Credits](#credits)
-
-
 ## Overview
 
 The Scoop provides an easy and engaging way to explore, share, and manage ice cream experiences. With a focus on user interaction, the site offers several CRUD functionalities, allowing visitors to Create, Read, Update, and Delete content as part of a dynamic, community-driven platform. The website is designed with a mobile-first approach, ensuring that it adapts seamlessly across different screen sizes, from desktop to mobile devices. Built using Bootstrap 5 for responsive grids, flexible layouts, and ease of customization.
@@ -136,21 +123,23 @@ User stories were used to keep track of the MOSCOW framework and project MVP as 
 
 | USER STORY | DETAILS | ACCEPTANCE CRITERIA |
 |---|---|---|
-| Open a review | As a Site User, I can click on a review so that I can read the full text | (1) When a review title is clicked on, a detailed view of the review is seen. |
-| View paginated list of reviews | As a Site User, I can view a paginated list of reviews so that I can select which review I want to view. | (1) Given more than one review in the database, these multiple reviews are listed. (2) When a user opens the main page a list of reviews is seen. (3) Then the user sees all review titles with pagination to choose what to read. |
-| Create draft reviews | As a Site Admin I can create draft reviews so that I can finish writing the content later | (1) Given a logged in user, they can save a draft review. (2) Then they can finish the content at a later time. |
-| Manage reviews | As a Site Admin I can create, read, update and delete reviews so that I can manage my site content | (1) Given a logged in user, they can create a review. (2) Given a logged in user, they can read a review. (3) Given a logged in user, they can update a review. (4) Given a logged in user, they can delete a review. |
-| Read about the reviewers | As a Site User I can click on the Meet Us link so that I can learn more about reviewers | When the Meet Us link is clicked, the about reviewers text is visible |
-| Add and update the about reviewer text | As a Site Admin I can create or update the Meet Us page content so that it is always up to date on the site. | (1) The About app is visible in the admin panel |
-| Account registration | As a Site User I can register an account so that I can comment on a review | (1) Given an email, a user can register an account. (2) Then the user can log in. (3) When the user is logged in they can comment on existing reviews. |
-| View comments | As a Site User / Admin I can view comments on an individual review so that I can read the conversation | (1) Given one or more user comments the admin can view them. (2) Then a site user can click on the comment thread to read the conversation. |
-| Comment on a review | As a Site User I can leave comments on a review so that I can be involved in the conversation | (1) When a user comment is approved. (2) Then a user can reply. (3) Given more than one comment then there is a conversation thread. |
-| Approve comments | As a Site Admin I can approve or disapprove comments so that I can filter out objectionable comments | (1) Given a logged in user, they can approve a comment. (2) Given a logged in user, they can disapprove a comment. |
-| Contact form | As a Potential Collaborator I can fill in a contact form so that I can submit a request for collaboration | (1) Potential Collaborator visiting site can submit request |
-| Store contact form requests | As a Site User I can store collaboration requests in the database so that I can review them | (1) View contact form requests (2) Mark collaboration requests as read. (3) See how many requests to still process |
-| Modify or delete comment on a review | As a Site User I can modify or delete my comment on a review so that I can be involved in the conversation | (1) Given a logged in user, they can modify their comment. (2) Given a logged in user, they can delete their comment. |
-| Add image to review | As a Site Admin I can add an image to review so that each post will give a visual detail| (1) Given a logged in user, they can add an image to a review. |
-| Add directions map to review | As a Site Admin I can add a directions URL so that location of place reviewed is accessible via map | (1) Given a logged in user, they can add a directions URL to a review. |
+| **Open a review** | As a Site User, I can click on a review so that I can read the full text | (1) When a review title is clicked on, a detailed view of the review is seen. |
+| **View paginated list of reviews** | As a Site User, I can view a paginated list of reviews so that I can select which review I want to view. | (1) Given more than one review in the database, these multiple reviews are listed. (2) When a user opens the main page a list of reviews is seen. (3) Then the user sees all review titles with pagination to choose what to read. |
+| **Create draft reviews** | As a Site Admin I can create draft reviews so that I can finish writing the content later | (1) Given a logged in user, they can save a draft review. (2) Then they can finish the content at a later time. |
+| **Manage reviews** | As a Site Admin I can create, read, update and delete reviews so that I can manage my site content | (1) Given a logged in user, they can create a review. (2) Given a logged in user, they can read a review. (3) Given a logged in user, they can update a review. (4) Given a logged in user, they can delete a review. |
+| **Read about the reviewers** | As a Site User I can click on the Meet Us link so that I can learn more about reviewers | When the Meet Us link is clicked, the about reviewers text is visible |
+| **Add and update the about reviewer text** | As a Site Admin I can create or update the Meet Us page content so that it is always up to date on the site. | (1) The About app is visible in the admin panel |
+| **Account registration** | As a Site User I can register an account so that I can comment on a review | (1) Given an email, a user can register an account. (2) Then the user can log in. (3) When the user is logged in they can comment on existing reviews. |
+| **View comments** | As a Site User / Admin I can view comments on an individual review so that I can read the conversation | (1) Given one or more user comments the admin can view them. (2) Then a site user can click on the comment thread to read the conversation. |
+| **Comment on a review** | As a Site User I can leave comments on a review so that I can be involved in the conversation | (1) When a user comment is approved. (2) Then a user can reply. (3) Given more than one comment then there is a conversation thread. |
+| **Approve comments** | As a Site Admin I can approve or disapprove comments so that I can filter out objectionable comments | (1) Given a logged in user, they can approve a comment. (2) Given a logged in user, they can disapprove a comment. |
+| **Contact form** | As a Potential Collaborator I can fill in a contact form so that I can submit a request for collaboration | (1) Potential Collaborator visiting site can submit request |
+| **Store contact form requests** | As a Site User I can store collaboration requests in the database so that I can review them | (1) View contact form requests (2) Mark collaboration requests as read. (3) See how many requests to still process |
+| **Modify or delete comment on a review** | As a Site User I can modify or delete my comment on a review so that I can be involved in the conversation | (1) Given a logged in user, they can modify their comment. (2) Given a logged in user, they can delete their comment. |
+| **Add image to review** | As a Site Admin I can add an image to review so that each post will give a visual detail| (1) Given a logged in user, they can add an image to a review. |
+| **Add directions map to review** | As a Site Admin I can add a directions URL so that location of place reviewed is accessible via map | (1) Given a logged in user, they can add a directions URL to a review. |
+| **Vote on a review** | As a Site User I can leave an upvote or downvote on a review so that I can give my opinion on the review | (1) When a user likes the review they click upvote icon. (2) When a user doesn't agree with review they click downvote icon |
+| **View vote totals** | As a Site User / Admin I can view votes on an individual review so that I can see what users think of review | (1) Given one or more user votes the totals are visible below review post. |
 
 
 ## Agile
@@ -228,8 +217,6 @@ A MOSCOW framework has been utilised.
 
 ### Wireframe
 
-### Accessibility
-
 ### ERD Design
 
 ### Database Model
@@ -267,6 +254,9 @@ __Application Structure__
 - Images downloaded under licenced user
   - Adobe Stock: https://stock.adobe.com/
 
+- Turning FontAwesome icon into sized favicons:
+  - Favicon: https://favicon.io/
+
 - Flowchart diagram created using Miro app:
   - Miro: https://miro.com/
     
@@ -282,43 +272,6 @@ __Application Structure__
   - https://stackoverflow.com/
   - https://www.w3schools.com/
   - https://www.geeksforgeeks.org/
-
-
-## Testing 
-
-- I have manually tested by checking the following:
-
-| TEST INPUT | CORRECT OUTCOME | MEET REQUIREMENTS |
-|:---:|:---:|:---:|
-| xxx | PASS |
-| 
-
-### Validator Testing 
-
-- 
-
-  ![Errors encountered](static/images/errors.webp)
-
-- 
-
-![No errors](static/images/clear.webp)
-
-### Bugs Encountered
-
-- 
-  - 
-
-![bug](assets/images/bug.webp)
-
-- 
-
-![Initial deployment](assets/images/first-deploy.webp)
-
-### Unfixed Bugs
-
-- No unfixed bugs, app running with no errors.
-
-![Final Result Success](assets/images/heroku-app.webp)
 
 
 ## Django Project Setup
