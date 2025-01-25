@@ -128,10 +128,22 @@ Testing was carried out on desktop using a Chrome browser to ensure all forms ta
 Manual testeing by checking the following:
 
 | TEST INPUT | CORRECT OUTCOME | MEET REQUIREMENTS |
-|:---:|:---:|:---:|
-| xxx | PASS |
-| 
-
+|------------|:---------------:|-------------------|
+| **Navbar Logo and Icons** | PASS | Logo takes user to home page, nav bar links take user to intended location, highlight mouse over for better accessibility. Nav bar toggle opens and closes in mobile view | 
+| **Log In Status** | PASS | 'You are not logged in' displays in Nav Bar |
+| **Login Link** | PASS | Opens Login page |
+| **Log into Account** | PASS | Username & password fields. Fields must be exactly as registered originally in either lowercase/uppercase or mixture. Empty fields deliver prompt to user, email field demands '@' symbols. Login is successful, message to confirm you are logged in. 'Welcome {username}' displays in Nav Bar |
+| **Register Link** | PASS | Opens Register page |
+| **Register Account** | PASS | Username, email(optional) and password fields. Empty fields deliver prompt to user, email field demands '@' symbols, username/password too similar, password too short, username already in use. Account is registered, message to confirm sign up |
+| **Review Card Links** | PASS | Review card link goes to the correct review post page |
+| **Comment Box (Logged out user)** | PASS | No comment form available, user is prompted to login via url link in place |
+| **Comment Box (Logged in user)** | PASS | Comment form available with comment field & submit button. Blank form submit returns prompt. Comment sent prompts user that comment is awaiting approval. Success message promted to confirm action. |
+| **Edit Comment** | PASS | Edit button visible under comment in panel. User can only edit their own comments. When editing the original comment is visible in comment form field for edit. If comment was previously approved, another promt is visible that comment is awaiting approval. Success message promted to confirm action. |
+| **Delete Comment** | PASS | Delete button visible under comment in panel. Delete modal pops up onclick, allowing user to cancel/confirm action for better usability. Success message promted to confirm action. |
+| **Meet Us Page Link** | PASS | About page loaded |
+| **Contact Form** | PASS | Collaboration contact form available to any site visitor with name, email, message fields & send button. Empty fields deliver prompt to user, email field demands '@' symbols. Message sent prompts success message to confirm action. |
+| **Social Links** | PASS | External link open in a new windows to correct sites |
+| **Logout** | PASS | Redirects to log out confirmation page, and account is logged out message once confirmed. 'You are not logged in' displays in Nav Bar |
 
 ## Bugs Encountered 
   
