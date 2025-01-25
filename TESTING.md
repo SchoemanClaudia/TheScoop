@@ -111,28 +111,28 @@ NOTE: `settings.py` Stock Django code gives E501 error, left unchanged to keep a
 - [x] Desktop view:
 
     **Home**  
-    ![Lighthouse Report Home](static/documentation/testing/.webp)
+    ![Lighthouse Report Home](static/documentation/testing/lh-home.webp)
 
     **Review post page**  
-    ![Lighthouse Report Review Post Page](static/documentation/testing/.webp)
+    ![Lighthouse Report Review Post Page](static/documentation/testing/lh-review.webp)
 
     **About Page**  
-    ![Lighthouse Report About](static/documentation/testing/.webp)
+    ![Lighthouse Report About](static/documentation/testing/lh-about.webp)
 
     **Register Page**  
-    ![Lighthouse Report Register](static/documentation/testing/.webp)
+    ![Lighthouse Report Register](static/documentation/testing/lh-register.webp)
 
     **Login Page**  
-    ![Lighthouse Report Login](static/documentation/testing/.webp)
+    ![Lighthouse Report Login](static/documentation/testing/lh-login.webp)
 
     **Logout Page**  
-    ![Lighthouse Report Logout](static/documentation/testing/.webp)
+    ![Lighthouse Report Logout](static/documentation/testing/lh-logout.webp)
 
 - [x] Mobile view:
-    - Lighthouse testing was carried out in Incognito mode to acheive the best result. Performance was lower than preferred on mobile view due to the site being image heavy. Images used in the sites design were compressed to offer the best chance for a decent performance score. The CDNs used for Bootstrap were also noted in the Lighthouse report as causing issue with performance. This report will be reviewed for future development of The Scoop to raise this score.
+    - Performance was lower than preferred on mobile view due to the site being image heavy on landing page. Images used in the sites design were compressed to offer the best chance for a decent performance score, but the score is significantly lower on 'best practices' - this is due to Cloudinary sending cookies when pulling images. The CDNs used for Bootstrap were also noted in the Lighthouse report as causing issue with performance. This report will be reviewed for future development of The Scoop to raise this score.
 
     **Home**  
-    ![Lighthouse Report Home Mobile](static/documentation/testing/.webp)
+    ![Lighthouse Report Home Mobile](static/documentation/testing/lh-mobile.webp)
 
 ### Accessibility
 
@@ -196,7 +196,7 @@ Most of these encountered were learning curves.
 | 14. | If no directions URL linked to a map, prompts page not found error | YES | Fix error with a conditional statement for `review.directions` and add non breaking space `&nbsp;` as a placeholder when no URL is provided. Directions text link only renders when URL is provided, avoiding page error | [Geeks for Geeks](https://www.geeksforgeeks.org/how-to-add-a-non-breaking-space-using-nbsp-in-html/) | 6beab79 |
 | 15. | Uncaught error when inspecting deployed page `_isAnimated() { return this._element.classList.contains(CLASS_NAME_FADE) }` | YES | Needed to override default behaviour and modified modal as NoAnimationModal | [Get Bootstrap](https://getbootstrap.com/docs/4.3/components/modal/#remove-animation) | 57155b5 |
 | 16. | Error when inspecting delete modal on deployed page `Uncaught TypeError: Cannot set properties of null (setting 'href') at HTMLAnchorElement.<anonymous>` | YES | Corrected event listener, to make sure element exists | Innitial incorrect input | c879c6e |
-| 17. | Last minute error with re-check of signup page in html validator | NO | Bug was created within django-alluth auto generated code | Tutor Support for picking up that bug was made in v0.56 and above, upon completetion The Scoop site is using v0.57 | Commit no. |
+| 17. | Last minute error with re-check of signup page in html validator | NO | Bug was created within django-alluth auto generated code | Tutor Support for picking up that bug was made in v0.56 and above, upon completetion The Scoop site is using v0.57 | 2316f28 |
 
 
 ### Unfixed Bugs
@@ -209,7 +209,7 @@ Most of these encountered were learning curves.
 
 - A warning encountered when refreshing page in Chrome every now and then, disappears in some instances: 
     - `Chrome is moving towards a new experience that allows users to choose to browse without third-party cookies.`
-    - Could be linked to Cloudinary database with storing images, will be looking further into this on next update.
+    - This could be due to Cloudinary sending cookies when pulling images, and will be looking further into this on next update.
     - Article about the warning: https://forums.knack.com/t/reading-cookie-in-cross-site-context-will-be-blocked-in-future-chrome-versions/17689
 
     ![Chrome warning](static/documentation/testing/warning.webp)
